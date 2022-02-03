@@ -8,10 +8,17 @@ const viewLess = ()=>{
 }
 const viewMore =()=>{
     
-    element.style.display = "block";
+  
+    if(element.style.display ==""){
+        element.style.display = "block";
+        viewMoreBtn.innerHTML = "View less";
+    }
+    else{
+        element.style.display = "";
+        viewMoreBtn.innerHTML = "View more";
+    }
    
-    viewMoreBtn.innerHTML = "View Less";
-    viewMoreBtn.addEventListener("click",viewLess);
+    // viewMoreBtn.addEventListener("click",viewLess);
 }
 
 viewMoreBtn.addEventListener("click",viewMore);
