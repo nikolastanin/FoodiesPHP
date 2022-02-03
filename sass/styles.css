@@ -161,6 +161,17 @@ a, ul {
   border: 2px solid #FF9D02;
 }
 
+.btn-cart {
+  background-color: #FF9D02;
+  padding: 7px;
+  text-decoration: none;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  border-style: none;
+  border-radius: 30px;
+}
+
 .big-headings {
   font-size: 5rem;
 }
@@ -353,6 +364,31 @@ mark {
 
 td {
   padding: 5px;
+}
+
+.cart-icon {
+  border: none;
+  background-color: none;
+}
+
+.cart-icon:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
+.cart-container {
+  display: none;
+  position: absolute;
+  bottom: -200px;
+  right: 0px;
+  width: 200px;
+  height: 200px;
+  background-color: #fdb435;
+}
+
+.checkout-container {
+  margin-top: 300px;
+  margin-bottom: 80vh;
 }
 
 @media screen and (max-width: 1095px) {

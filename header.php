@@ -48,9 +48,18 @@
         <li >
             <a  href="admin.php">Admin </a>
         </li>
+        <li>
+            <!-- <span class="cart-icon"><img src="images/shopping-cart.png" alt=""></span> -->
+            <button class="cart-icon btn-cart"><img src="images/shopping-cart.png" alt=""></button>
+        </li>
 
 
     </ul>
+
+    <!-- <div class="cart-container" style="display:none;"> -->
+    <div class="cart-container">
+      
+    </div>
     <button class="btn-yellow"id="sandwich">menu</button>
 
 </header>

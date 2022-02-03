@@ -15,3 +15,6 @@
         <b>Copyright Nikola Stanin</b>
     </ul>
 </footer>
+
+<script src="scripts/shopping-cart.js" async defer></script>
+<script src="scripts/main.js" async defer></script>
