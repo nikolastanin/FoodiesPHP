@@ -59,6 +59,7 @@ if (isset($sql_str)) {
                                 <div class="product-list__title">'.$value['category'].'</div>
                                 <div class="product-list__subtitle">'.$value['name'].'</div>
                                 <div class="product-list__price">'.$value['price'].' din.</div>
+                                <button class="product-list__button">add to cart </button>
                             </div>';
                     }
                 }
@@ -70,5 +71,6 @@ if (isset($sql_str)) {
         </div>
     </section>
 
-
+    <!-- <script src="main.js" async defer ></script> -->
+    <script src="shopping-cart.js" async defer></script>
 <?php include "footer.php"?>
