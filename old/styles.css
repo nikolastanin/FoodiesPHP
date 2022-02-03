@@ -1,0 +1,19 @@
+body{
+    background-color: cornflowerblue;
+}
+
+
+/*nav bar */
+
+ul{
+   display: flex;
+   flex-direction: row;
+  
+   list-style: none; 
+}
+li:hover{
+    background-color: red;
+}
+li{
+    margin-right: 20px;
+}
