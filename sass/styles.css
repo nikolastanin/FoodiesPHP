@@ -38,8 +38,8 @@ header {
 
 header .logo {
   position: relative;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: color 0.6s;
+  transition: color 0.6s;
   font-size: 2rem;
 }
 
@@ -80,15 +80,6 @@ header ul li a {
 
 header ul li a:hover {
   color: #FF9D02;
-}
-
-#cart-cont {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
 }
 
 header.sticky {
@@ -182,7 +173,6 @@ h2 {
   margin: 100px auto;
 }
 
-/* NAVBAR  */
 /* TITLE SECTION */
 #title {
   margin-top: 200px;
@@ -384,6 +374,12 @@ td {
   width: 200px;
   height: 200px;
   background-color: #fdb435;
+}
+
+.cart-items__container {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 80%;
 }
 
 .checkout-container {

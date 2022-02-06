@@ -58,7 +58,15 @@
 
     <!-- <div class="cart-container" style="display:none;"> -->
     <div class="cart-container">
-      
+      <div class="cart-items__container">
+            <!-- <div class="cart-item">
+                
+            </div> -->
+      </div>
+      <div class="cart-buttons">
+          <button class="cart-button__clear">clear</button>
+          <button class="cart-button__checkout">checkout</button>
+      </div>
     </div>
     <button class="btn-yellow"id="sandwich">menu</button>
 

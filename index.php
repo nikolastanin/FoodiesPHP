@@ -121,7 +121,7 @@ include "header.php";
 <?php include "footer.php"?>
 
 
-
+<script src="scripts/main.js" async defer></script>
 
 </body>
 </html>
