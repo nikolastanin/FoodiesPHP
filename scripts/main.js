@@ -33,14 +33,16 @@ started_btn.addEventListener("click",scrollToFunc);
 
 // sticky nav bar
 
-window.addEventListener("scroll",function(){
-    var header = document.querySelector("header");
-    header.classList.toggle("sticky",window.scrollY >0);
-})
+// window.addEventListener("scroll",function(){
+//     var header = document.querySelector("header");
+//     header.classList.toggle("sticky",window.scrollY >0);
+// })
 //navbar
 let x = document.getElementById("sandwich");
 let navbar = document.getElementById("navbar-list");
 let y =  document.getElementById("cart-cont");
+
+//menu FIX THIS ! not activating in responsive mode
 const activateMenu = () =>{
       navbar.style.display ="flex";
       x.style.display = "none";

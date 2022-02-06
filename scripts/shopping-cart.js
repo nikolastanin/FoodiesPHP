@@ -39,7 +39,7 @@ const showData = () =>{
 
     
         });
-
+        //POP UP ICON WHEN ADD ITEMM !? 
         //TOTAL PRICE ??
         //EXIT BUTTON
         //NAME I THUMBNAIL OF ITEM
@@ -69,7 +69,7 @@ console.log(testing +"rezultati JSON");
 
 }
 
-
+//adding items to array and calling showing data function
 const addItem = (e) =>{
     console.log("click");
 let data = e.currentTarget.previousSibling.previousSibling.textContent;
@@ -94,13 +94,15 @@ const showCart = () =>{
 }
 // provera da li je prazan cart !?
 const checkEmpty = () =>{
-
-}
-
-const clearCart = () =>{
     if(cartElements.length==0){
-        console.log("already empty");
-        window.alert("already empty cart!");
+        return true;
+    }
+    return false;
+}
+//clearing cart elements from body and array
+const clearCart = () =>{
+    if(checkEmpty() ==true){
+      window.alert("cart is already empty!");
     }
     else{
 
@@ -119,6 +121,10 @@ const clearCart = () =>{
     
 }
 const checkout = () =>{
+    if(checkEmpty() ==true){
+        window.alert("your cart is empty! choose your items");
+      }
+      else
     window.location = "./checkout.php";
 }
 //Event listeners

@@ -28,7 +28,7 @@
 </head>
 <body>
 
-<header id="navbar"class="sticky">
+<header id="navbar"class="">
 
     <a href="" class="logo navbar-brand"><mark>Food</mark>ies</a>
     <ul id="navbar-list" class="navbar-active">

@@ -122,6 +122,8 @@ include "header.php";
 
 
 <script src="scripts/main.js" async defer></script>
+<!-- deleted scr because it needs to work everywhere -->
+<!-- <script src="scripts/sticky-nav.js" async defer></script> -->
 
 </body>
 </html>

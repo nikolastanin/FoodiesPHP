@@ -17,3 +17,4 @@
 </footer>
 
 <script src="scripts/shopping-cart.js" async defer></script>
+<script src="scripts/sticky-nav.js" async defer></script>
