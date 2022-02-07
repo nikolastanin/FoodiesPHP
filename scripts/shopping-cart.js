@@ -10,7 +10,7 @@ console.log(products);
 const checkoutContainer = document.querySelector(".checkout-container");
 let cartElements = [];
 let  itemCount;
-
+let  btn_plus ="";
 //    TO DO 
   //POP UP ICON WHEN ADD ITEMM !? 
         //TOTAL PRICE ??
@@ -20,11 +20,23 @@ let  itemCount;
         //CLEAR FUNKCIJA SAMO ENABLAVANO AKO IMA ITEMSA..?
         //POSLE CLEAR-A --->>>> SHOW I UPDATE LOCAL STORAGE FUNKCIJE.. 
         //MENU U RESPONSIVU MODU NE RADI BUTTON
-
-
+        let n=0;
+const addQuantity = (e) =>{
+n=0;
+    console.log(e.target.id);
+    if(e.target.id==="add"){
+     
+       n++;
+    }
+    else {
+        
+       n--;
+    }
+    console.log(n);
+}
 
 //Displaying CartItems
-const showData = () =>{
+const showData = async () =>{
     let string ="";
     itemCount = 0;
         cartElements.forEach(element => {
@@ -33,18 +45,27 @@ const showData = () =>{
             console.log(element.title+` = element broj [${itemCount}]`);
             string+= ` <div class="cart-item">
             <p>${element.title}</p>
-             <button class="item-btn__plus">+</button>
-             <button class="item-btn__min">-</button>
+             <button class="btn-quantity" id="add">+</button>
+             <button class="btn-quantity" id="sub">-</button>
         </div>`;
         cartItemsContainer.innerHTML = string;
 
         });
 
 
-
-
+btn_plus = document.querySelectorAll(".btn-quantity");
+btn_plus.forEach(element => {
+    element.addEventListener("click", addQuantity)
+    });
       
-    }
+}
+    
+
+
+
+
+
+
 //updating quantity of a cart item
     const updateQuantity = (n,id) =>{
 
@@ -175,6 +196,7 @@ buttons.forEach(element => {
     
 
  });
+
 //  event listeners for cart elements
 cartBtn.addEventListener("click",showCart);
 clearBtn.addEventListener("click",clearCart);
