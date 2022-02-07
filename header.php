@@ -50,8 +50,9 @@
             <a  href="admin.php">Admin </a>
         </li>
         <li>
-            <!-- <span class="cart-icon"><img src="images/shopping-cart.png" alt=""></span> -->
-            <button class="cart-icon btn-cart"><img src="images/shopping-cart.png" alt=""></button>
+            <span class="cart-icon btn-cart"><img src="images/shopping-cart.png" alt=""><span class="cart-count">(0)</span></span>
+            <!-- <button class="cart-icon btn-cart"><img src="images/shopping-cart.png" alt=""></button> -->
+        
         </li>
 
 

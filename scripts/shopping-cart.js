@@ -7,6 +7,7 @@ const clearBtn = document.querySelector(".cart-button__clear");
 const checkoutBtn = document.querySelector(".cart-button__checkout");
 const cartContainer = document.querySelector(".cart-container");
 const cartItemsContainer = document.querySelector(".cart-items__container");
+const cartItemsCount = document.querySelector(".cart-count");
 console.log(cartBtn);
 console.log(products);
 const checkoutContainer = document.querySelector(".checkout-container");
@@ -42,10 +43,13 @@ const showData = () =>{
         </div>`;
         cartItemsContainer.innerHTML = string;
         
+        cartItemsCount.textContent = `${"("+itemCount+")"}`;
+
+      
         });
 
         
-       
+        
 
 
 
@@ -85,7 +89,8 @@ const deleteItem = (e)=>{
                 cartElements.splice([i],1);
                 console.log(cartElements);
                 updateLocalStorage();
-                
+                 itemCount--;
+                showData();
             }
         }
 
@@ -223,7 +228,7 @@ const clearCart = () =>{
 
 //Directing to checkout page if the user clicks and the cart is !empty
 const checkout = () =>{
-    if(checkEmpty() ==true){
+    if(cartElements.length==0){
         window.alert("your cart is empty! choose your items");
       }
       else
