@@ -33,14 +33,14 @@ const showData = () =>{
         //   counting items in cart
             itemCount++;
             console.log(element.title+` = element broj [${itemCount}]`);
-            string+= ` <div class="cart-item">
+            string+= ` <div class="cart-item" id="${element.id}">
             <p id="${element.id}">${element.title}</p>
             <input type="number" id="quantityBox" name="quantity" min="1" max="5" value="${element.quantity}">
             <p>${element.quantity}</p>
             <button id="${element.id}" class="delete-item__btn">delete</button>
         </div>`;
         cartItemsContainer.innerHTML = string;
-
+        
         });
 
         quantityBox = document.querySelectorAll("#quantityBox");
@@ -57,19 +57,38 @@ const showData = () =>{
     
 
 const deleteItem = (e)=>{
-    console.log("DELETING ITEM");
-    let id = e.target.id;
-    console.log(id);
 
 
-   let filteredArray = cartElements.filter(function(item){
-      console.log(cartElements.length);
-       return item.id != id;
-   })
-       console.log(filteredArray);
-       cartElements = filteredArray;
-     updateLocalStorage();
-     showData();
+
+        //div koji drzi elemente
+        let div = e.target.parentNode;
+        console.log(div.id +"ovo je id");
+        let id =div.id;
+        // div.remove();
+        // let filteredArray = cartElements.filter(function(item){
+        //           console.log(cartElements.length);
+        //            return item.id != id;
+        //        })
+        //            console.log(filteredArray);
+        //            cartElements = filteredArray;
+
+        for(let i=0; i<=cartElements.length; i++){
+            console.log(i +" broj ");
+            if(div.id == cartElements[i].id){
+               
+                cartElements.splice([i],1);
+                console.log(cartElements);
+                updateLocalStorage();
+                 showData();
+            }
+        }
+
+                //  updateLocalStorage();
+                //  showData();
+       
+
+
+        
 }
 
 
@@ -96,7 +115,7 @@ const deleteItem = (e)=>{
 //check if local storage is empty if not show the data
 window.onload = (event) => {
     let fetchData = JSON.parse(localStorage.getItem("products"));
-    if(fetchData == null){
+    if(fetchData.length == 0 ){
         console.log("nema nista u storagu");
     }
     else{
@@ -161,17 +180,17 @@ const showCart = () =>{
 
 
 // Checking if the cart is empty
-const checkEmpty = () =>{
-    if(cartElements.length==0){
-        return true;
-    }
-    return false;
-}
+// const checkEmpty = () =>{
+//     if(cartElements.length==0){
+//         return true;
+//     }
+//     return false;
+// }
 
 
 //clearing cart elements from body and array
 const clearCart = () =>{
-    if(checkEmpty() ==true){
+    if(cartElements.length==0){
       window.alert("cart is already empty!");
     }
     else{
@@ -182,10 +201,11 @@ const clearCart = () =>{
    localStorage.removeItem("products");
 
    //ovo moze i u show data ???
- let node =   document.querySelectorAll(".cart-item");
-    console.log(node);
-    node.forEach(element => {
-         element.remove();
+ let cartItemsNodes =   document.querySelectorAll(".cart-item");
+
+    console.log(cartItemsNodes);
+    cartItemsNodes.forEach(element => {
+        element.remove();
     });
 }
     
