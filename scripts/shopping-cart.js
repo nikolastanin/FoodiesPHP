@@ -37,6 +37,7 @@ const showData = () =>{
             <p id="${element.id}">${element.title}</p>
             <input type="number" id="quantityBox" name="quantity" min="1" max="5" value="${element.quantity}">
             <p>${element.quantity}</p>
+            <button id="${element.id}" class="delete-item__btn">delete</button>
         </div>`;
         cartItemsContainer.innerHTML = string;
 
@@ -46,12 +47,30 @@ const showData = () =>{
         quantityBox.forEach(element => {
             element.addEventListener("change",updateQuantity);
         });
-
+        let deleteBtns = document.querySelectorAll(".delete-item__btn");
+        console.log(deleteBtns);
+        deleteBtns.forEach(element => {
+            element.addEventListener("click",deleteItem);
+        });
       
 }
     
 
+const deleteItem = (e)=>{
+    console.log("DELETING ITEM");
+    let id = e.target.id;
+    console.log(id);
 
+
+   let filteredArray = cartElements.filter(function(item){
+      console.log(cartElements.length);
+       return item.id != id;
+   })
+       console.log(filteredArray);
+       cartElements = filteredArray;
+     updateLocalStorage();
+     showData();
+}
 
 
 
@@ -171,6 +190,9 @@ const clearCart = () =>{
 }
     
 }
+
+
+
 
 
 //Directing to checkout page if the user clicks and the cart is !empty
