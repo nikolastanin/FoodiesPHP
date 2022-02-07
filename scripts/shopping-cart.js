@@ -29,6 +29,7 @@ let  quantityBox="";
 const showData = () =>{
     let string ="";
     itemCount = 0;
+    //ovo si mutovao
         cartElements.forEach(element => {
         //   counting items in cart
             itemCount++;
@@ -42,6 +43,11 @@ const showData = () =>{
         cartItemsContainer.innerHTML = string;
         
         });
+
+        
+       
+
+
 
         quantityBox = document.querySelectorAll("#quantityBox");
         quantityBox.forEach(element => {
@@ -64,7 +70,7 @@ const deleteItem = (e)=>{
         let div = e.target.parentNode;
         console.log(div.id +"ovo je id");
         let id =div.id;
-        // div.remove();
+         div.remove();
         // let filteredArray = cartElements.filter(function(item){
         //           console.log(cartElements.length);
         //            return item.id != id;
@@ -79,7 +85,7 @@ const deleteItem = (e)=>{
                 cartElements.splice([i],1);
                 console.log(cartElements);
                 updateLocalStorage();
-                 showData();
+                
             }
         }
 
@@ -115,7 +121,7 @@ const deleteItem = (e)=>{
 //check if local storage is empty if not show the data
 window.onload = (event) => {
     let fetchData = JSON.parse(localStorage.getItem("products"));
-    if(fetchData.length == 0 ){
+    if(fetchData== null || fetchData.length == 0){
         console.log("nema nista u storagu");
     }
     else{
