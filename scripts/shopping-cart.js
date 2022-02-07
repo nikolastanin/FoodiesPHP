@@ -1,3 +1,5 @@
+
+
 const products = document.querySelectorAll(".product-list__item");
 const buttons = document.querySelectorAll(".product-list__button");
 const cartBtn = document.querySelector(".btn-cart");
@@ -10,7 +12,7 @@ console.log(products);
 const checkoutContainer = document.querySelector(".checkout-container");
 let cartElements = [];
 let  itemCount;
-let  btn_plus ="";
+let  quantityBox="";
 //    TO DO 
   //POP UP ICON WHEN ADD ITEMM !? 
         //TOTAL PRICE ??
@@ -20,23 +22,11 @@ let  btn_plus ="";
         //CLEAR FUNKCIJA SAMO ENABLAVANO AKO IMA ITEMSA..?
         //POSLE CLEAR-A --->>>> SHOW I UPDATE LOCAL STORAGE FUNKCIJE.. 
         //MENU U RESPONSIVU MODU NE RADI BUTTON
-        let n=0;
-const addQuantity = (e) =>{
-n=0;
-    console.log(e.target.id);
-    if(e.target.id==="add"){
-     
-       n++;
-    }
-    else {
-        
-       n--;
-    }
-    console.log(n);
-}
+       
+
 
 //Displaying CartItems
-const showData = async () =>{
+const showData = () =>{
     let string ="";
     itemCount = 0;
         cartElements.forEach(element => {
@@ -44,19 +34,19 @@ const showData = async () =>{
             itemCount++;
             console.log(element.title+` = element broj [${itemCount}]`);
             string+= ` <div class="cart-item">
-            <p>${element.title}</p>
-             <button class="btn-quantity" id="add">+</button>
-             <button class="btn-quantity" id="sub">-</button>
+            <p id="${element.id}">${element.title}</p>
+            <input type="number" id="quantityBox" name="quantity" min="1" max="5" value="${element.quantity}">
+            <p>${element.quantity}</p>
         </div>`;
         cartItemsContainer.innerHTML = string;
 
         });
 
+        quantityBox = document.querySelectorAll("#quantityBox");
+        quantityBox.forEach(element => {
+            element.addEventListener("change",updateQuantity);
+        });
 
-btn_plus = document.querySelectorAll(".btn-quantity");
-btn_plus.forEach(element => {
-    element.addEventListener("click", addQuantity)
-    });
       
 }
     
@@ -67,14 +57,17 @@ btn_plus.forEach(element => {
 
 
 //updating quantity of a cart item
-    const updateQuantity = (n,id) =>{
-
+    const updateQuantity = (e) =>{
+    let value = e.target.value;
+    let id= e.target.previousSibling.previousSibling.id;
+    console.log(value,id);
+    
         const update = cartElements.find((element) => {
             return element.id == id;
           });
           
         //   console.log(update);
-          update.quantity = n;
+          update.quantity = value;
         //   console.log(update);
         updateLocalStorage();
 
@@ -83,14 +76,15 @@ btn_plus.forEach(element => {
 
 //check if local storage is empty if not show the data
 window.onload = (event) => {
-    let testing = JSON.parse(localStorage.getItem("products"));
-    if(testing == null){
+    let fetchData = JSON.parse(localStorage.getItem("products"));
+    if(fetchData == null){
         console.log("nema nista u storagu");
     }
     else{
         console.log("ima nesto");
-        cartElements = testing;
+        cartElements = fetchData;
         showData();
+        
     }
   };
 
