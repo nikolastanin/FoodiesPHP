@@ -9,37 +9,10 @@ console.log(cartBtn);
 console.log(products);
 const checkoutContainer = document.querySelector(".checkout-container");
 let cartElements = [];
-products.forEach(element => {
-    console.log(element);
-});
-
 let  itemCount;
-const showData = () =>{
-    let string ="";
-    itemCount = 0;
-        cartElements.forEach(element => {
 
-           
-
-            
-            itemCount++;
-            console.log(element+`element broj:${itemCount}`);
-            // string += `<p>${element}</p>`;
-            // cartContainer.innerHTML =string;
-            //loads checkout.php(page not visible on nav menu)
-            // ali daje gresku i ona PREKINE LOOP popravi tako sto ces ucitati podatke iz cartElements ne odavde..
-            // checkoutContainer.innerHTML = string;
-
-            string+= ` <div class="cart-item">
-            <p>${element}</p>
-             <button class="item-btn__plus">+</button>
-             <button class="item-btn__min">-</button>
-        </div>`;
-        cartItemsContainer.innerHTML = string;
-
-    
-        });
-        //POP UP ICON WHEN ADD ITEMM !? 
+//    TO DO 
+  //POP UP ICON WHEN ADD ITEMM !? 
         //TOTAL PRICE ??
         //EXIT BUTTON
         //NAME I THUMBNAIL OF ITEM
@@ -47,7 +20,46 @@ const showData = () =>{
         //CLEAR FUNKCIJA SAMO ENABLAVANO AKO IMA ITEMSA..?
         //POSLE CLEAR-A --->>>> SHOW I UPDATE LOCAL STORAGE FUNKCIJE.. 
         //MENU U RESPONSIVU MODU NE RADI BUTTON
+
+
+
+//Displaying CartItems
+const showData = () =>{
+    let string ="";
+    itemCount = 0;
+        cartElements.forEach(element => {
+        //   counting items in cart
+            itemCount++;
+            console.log(element.title+` = element broj [${itemCount}]`);
+            string+= ` <div class="cart-item">
+            <p>${element.title}</p>
+             <button class="item-btn__plus">+</button>
+             <button class="item-btn__min">-</button>
+        </div>`;
+        cartItemsContainer.innerHTML = string;
+
+        });
+
+
+
+
+      
     }
+//updating quantity of a cart item
+    const updateQuantity = (n,id) =>{
+
+        const update = cartElements.find((element) => {
+            return element.id == id;
+          });
+          
+        //   console.log(update);
+          update.quantity = n;
+        //   console.log(update);
+        updateLocalStorage();
+
+
+    }
+
 //check if local storage is empty if not show the data
 window.onload = (event) => {
     let testing = JSON.parse(localStorage.getItem("products"));
@@ -65,23 +77,43 @@ window.onload = (event) => {
 const updateLocalStorage = () =>{
 localStorage.setItem("products", JSON.stringify(cartElements));
 let testing = JSON.parse(localStorage.getItem("products"));
-console.log(testing +"rezultati JSON");
+// console.log(testing +"rezultati JSON");
 
 }
+
+
+
+//class of Item
+class Item{
+    constructor(price,title,quantity,id){
+        this.price = price;
+        this.title = title;
+        this.quantity = quantity;
+        this.id = id;
+    }
+}
+
+
 
 //adding items to array and calling showing data function
 const addItem = (e) =>{
     console.log("click");
-let data = e.currentTarget.previousSibling.previousSibling.textContent;
-console.log(e.currentTarget.previousSibling.previousSibling.previousSibling.previousSibling.textContent);
- cartElements.push(data);
-        updateLocalStorage();
+ let cartItem = new Item();
+ let price = e.currentTarget.previousSibling.previousSibling.textContent;
+cartItem.price = price.substring(0,price.length-4);
+cartItem.title = e.currentTarget.previousSibling.previousSibling.previousSibling.previousSibling.textContent;
+cartItem.quantity = 0;
+cartItem.id = Date.now();
+cartElements.push(cartItem);
+
+       updateLocalStorage();
        showData();
 }
 
 
 
 
+//Showign the cart on user click
 const showCart = () =>{
 
    if( cartContainer.style.display==""){
@@ -92,13 +124,17 @@ const showCart = () =>{
     cartContainer.style.display="";
    }
 }
-// provera da li je prazan cart !?
+
+
+// Checking if the cart is empty
 const checkEmpty = () =>{
     if(cartElements.length==0){
         return true;
     }
     return false;
 }
+
+
 //clearing cart elements from body and array
 const clearCart = () =>{
     if(checkEmpty() ==true){
@@ -120,6 +156,9 @@ const clearCart = () =>{
 }
     
 }
+
+
+//Directing to checkout page if the user clicks and the cart is !empty
 const checkout = () =>{
     if(checkEmpty() ==true){
         window.alert("your cart is empty! choose your items");
@@ -127,13 +166,16 @@ const checkout = () =>{
       else
     window.location = "./checkout.php";
 }
-//Event listeners
 
+
+
+//Event listeners for backend loaded items
 buttons.forEach(element => {
     element.addEventListener("click", addItem);
     
- });
 
+ });
+//  event listeners for cart elements
 cartBtn.addEventListener("click",showCart);
 clearBtn.addEventListener("click",clearCart);
 checkoutBtn.addEventListener("click",checkout)

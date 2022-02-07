@@ -23,20 +23,21 @@ body{
 // new nav
 header{
     position: fixed;
-    top:0;
+     top:0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: 0.6s;
     color:red;
-    
+    height: 100px;
     z-index: 1000;
     padding: 1% 7%;
     .logo{
-        position: relative;
+        // position: relative;
         transition: color 0.6s;
         font-size: 2rem;
+        margin-right: auto;
     }
     .logo:hover{
         color:$primary-color;
@@ -44,9 +45,10 @@ header{
         ul{
             position: relative;
             display:flex;
-            justify-content: center;
-            align-items: flex-end;
+            align-items: center;
             padding: 0;
+            // justify-content: space-between;
+            width: 100%;
             li{
                 position: relative;
                 list-style: none;

@@ -30,8 +30,9 @@
 
 <header id="navbar"class="">
 
-    <a href="" class="logo navbar-brand"><mark>Food</mark>ies</a>
+    <!-- <a href="" class="logo navbar-brand"><mark>Food</mark>ies</a> -->
     <ul id="navbar-list" class="navbar-active">
+    <a href="" class="logo "><mark>Food</mark>ies</a>
         <li>
             <a href="index.php">Home</a>
             <!-- <img class="active-icon" src="images/black-circle.png" width="5px"alt=""> -->
