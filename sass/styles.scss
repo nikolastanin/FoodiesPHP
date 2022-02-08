@@ -1,3 +1,4 @@
+//colors 
 $primary-color: #FF9D02;
 $title-color : #232323;
 $paragraph-color : #8E8E8E;
@@ -11,83 +12,30 @@ html {
      scroll-behavior: smooth;
      
     }  
+    
 body{
     background-color: white;
     text-align: center;
     font-family: Poppins;
     overflow-x: hidden;
-    //  background-color: red;
+  
     
 }
-
-// new nav
-header{
-    position: fixed;
-     top:0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: 0.6s;
-    color:red;
-    height: 100px;
-    z-index: 1000;
-    padding: 1% 7%;
-    .logo{
-        // position: relative;
-        transition: color 0.6s;
-        font-size: 2rem;
-        margin-right: auto;
-    }
-    .logo:hover{
-        color:$primary-color;
-    }
-        ul{
-            position: relative;
-            display:flex;
-            align-items: center;
-            padding: 0;
-            // justify-content: space-between;
-            width: 100%;
-            li{
-                position: relative;
-                list-style: none;
-               
-                a{
-                    position: relative;
-                    margin : 0 50px;
-                    padding: 0;
-                    text-decoration: none;
-                    letter-spacing: 2px;
-                    transition : 0.6s;
-                    font-size: 1.1rem;
-                    font-weight: 600;
-                }
-                a:hover{
-                    color:$primary-color;
-                }
-            }
-
-        }
-        
-
-
-}
-// #cart-cont{
-//     display: flex;
-//     align-items: flex-end;
-// }
-header.sticky{
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
 
 h1,h2,h3,h4,h5,h6,a{
     
     font-weight: 700;
     color : $title-color;
 }
+//stavi pod parrent?
+h2{
+    font-size: 3rem;
+    width: 50%;
+    margin: 100px auto;
+
+}
+
+//stavi pod parrent ?
 p{
     
     color:$paragraph-color;
@@ -98,10 +46,93 @@ p{
     margin: auto;
      text-align: center;
 }
-a,ul{
-    text-decoration: none;
-    list-style-type: none;
+
+//ovo ide u nav
+// a,ul{
+//     text-decoration: none;
+//     list-style-type: none;
+// }
+
+
+
+.container-fluid{
+    padding: 3% 7%;
+    
 }
+
+// Navigation 
+// header{
+//     position: fixed;
+//      top:0;
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     transition: 0.6s;
+//     color:red;
+//     height: 100px;
+//     z-index: 1000;
+//     padding: 1% 7%;
+//     .logo{
+//         // position: relative;
+//         transition: color 0.6s;
+//         font-size: 2rem;
+//         margin-right: auto;
+//     }
+//     .logo:hover{
+//         color:$primary-color;
+//     }
+//         ul{
+//             position: relative;
+//             display:flex;
+//             align-items: center;
+//             padding: 0;
+//             // justify-content: space-between;
+//             width: 100%;
+//             li{
+//                 position: relative;
+//                 list-style: none;
+               
+//                 a{
+//                     position: relative;
+//                     margin : 0 50px;
+//                     padding: 0;
+//                     text-decoration: none;
+//                     letter-spacing: 2px;
+//                     transition : 0.6s;
+//                     font-size: 1.1rem;
+//                     font-weight: 600;
+//                 }
+//                 a:hover{
+//                     color:$primary-color;
+//                 }
+//             }
+
+//         }
+        
+
+
+// }
+
+
+//new new navbar
+
+nav{
+    .menu{
+        
+    }
+    
+}
+
+
+//navigation sticky properties
+header.sticky{
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+
 
 /* BUTTONS */
 .btn-yellow{
@@ -152,15 +183,12 @@ a,ul{
     border-radius: 30px;
     
 }
+.btn-cart:hover{
+
+}
 // TEXT
 .big-headings{
     font-size: 5rem;
-}
-h2{
-    font-size: 3rem;
-    width: 50%;
-    margin: 100px auto;
-
 }
 
 
@@ -182,6 +210,7 @@ h2{
     transform: scaleX(-1);
 
 }
+
 /* Features section */
 #features-section{
     margin-bottom: 300px;
@@ -194,42 +223,6 @@ h2{
 
 
 
-/* MENU SECTION */
-.rows{
-    display: flex;
-    /* flex-direction: column;  OVO IDE U MEDIA Q*/
-}
-.carousel-img{
-   
-    max-height: 50%;
-    border-radius: 30px 30px 0 0;
-     width: 100%;
-     object-fit: cover;
-     
-     
-}
-.carousel-box{
-    // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 30px;
- 
-   margin: 2%; 
-  h3, .btn-yellow, .ratings{
-      margin-top:25px;
-      
-  }
-
-   
-}
-.carousel-box:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-.fas{
-    color:$primary-color;
-}
-#cart-num{
-    display: inline-block;
-}
 // ABOUT SECTION
 #about-us{
     .about-img{
@@ -277,68 +270,33 @@ footer{
        } 
     }
 }
-.container-fluid{
-    padding: 3% 7%;
-    
-}
 
-mark{
+
+.span-title{
     color:$primary-color;
     background-color: transparent;
 }
 #sandwich{
     display: none;
 }
-#menu{
-    margin-top: 200px;
-}
 
 
-
-
-//admin page
-.cover-admin{
-  margin:0 300px ;
-}
-//table row
-//images from database
-.product-container-menu{
-    margin-left:200px;
-    .product-list-content{
-        margin-top:120px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-
-
-    .product-list-img{
-
-
-        border : 2px solid $primary-color;
-        border-radius: 20%;
-
-        width: 40%;
-    }
-}
-.product-list-home{
-        margin-left:200px;
-    img{
-       width:50%;
-       border : 2px solid $primary-color;
-       border-radius: 20%;
-   }
-
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-td{
+// admin page
+.admin__table{
+    td{
 
 
         padding: 5px;
+    }
 }
+
+
+
+
+
+
+
+
 
 //cart
 .cart-icon{
@@ -371,31 +329,32 @@ td{
     // padding: 5%;
     margin-bottom: 80vh;
 }
+
 // MEDIA QUERIES
 @media screen and (max-width:1095px) {
    
-    #navbar-list{
+    // #navbar-list{
         
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* align-items: flex-end; */
-        padding: 0;
-        display: none;
-        align-items: center;
+    //     position: relative;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     /* align-items: flex-end; */
+    //     padding: 0;
+    //     display: none;
+    //     align-items: center;
        
-    }
-    header .responsive{
-        display: flex;
-    }
-    #sandwich{
-        display:inline-block;
-    }
-    .rows{
-        display: flex;
-        flex-direction: column; 
-    }
+    // }
+    // header .responsive{
+    //     display: flex;
+    // }
+    // #sandwich{
+    //     display:inline-block;
+    // }
+    // .rows{
+    //     display: flex;
+    //     flex-direction: column; 
+    // }
     p{
         width:100%;
     }
@@ -410,7 +369,10 @@ td{
        margin-left:0;
        width: 100%;
     }
-  .responsive{
-        display:flex;
-    }
+//   .responsive{
+//         display:flex;
+//     }
+
+
+//end of media queries!
   }
