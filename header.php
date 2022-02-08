@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+
+<?php
+
+?>
 
 <html>
 <head>
@@ -16,9 +19,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+
     <script src="https://kit.fontawesome.com/af63b2d295.js" crossorigin="anonymous"></script>
-<!-- java script src files -->
-    
+<!-- 
+bootstrap     -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -28,38 +32,42 @@
 </head>
 <body>
 
-<header id="navbar"class="">
 
-    <!-- <a href="" class="logo navbar-brand"><mark>Food</mark>ies</a> -->
-    <ul id="navbar-list" class="navbar-active">
-    <a href="" class="logo "><mark>Food</mark>ies</a>
-        <li>
+
+
+<nav>
+    <ul class="nav-menu">
+      <li class="nav-logo">
+      <a href="" class="nav-logo-title"><span class="span-title">Food</span>ies</a>
+      </li>
+      
+      <li  class="nav-item">
             <a href="index.php">Home</a>
             <!-- <img class="active-icon" src="images/black-circle.png" width="5px"alt=""> -->
         </li>
-        <li >
+
+      <li class="nav-item">
             <a href="index.php#about-us">About us</a>
         </li>
-        <li  >
+        <li class="nav-item" >
             <a  href="menu.php">Menu</a>
         </li>
-        <li >
+        <li class="nav-item" >
             <a  href="index.php#footer">Contact us </a>
         </li>
-        <li >
+        <li class="nav-item" >
             <a  href="admin.php">Admin </a>
         </li>
-        <li>
+        <li  class="nav-item">
             <span class="cart-icon btn-cart"><img src="images/shopping-cart.png" alt=""><span class="cart-count">(0)</span></span>
-            <!-- <button class="cart-icon btn-cart"><img src="images/shopping-cart.png" alt=""></button> -->
+           
         
         </li>
-
-
+        <!-- <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li> -->
     </ul>
+</nav>
 
-    <!-- <div class="cart-container" style="display:none;"> -->
-    <div class="cart-container">
+<div class="cart-container">
       <div class="cart-items__container">
             <!-- <div class="cart-item">
                 
@@ -71,7 +79,3 @@
       </div>
     </div>
     <button class="btn-yellow"id="sandwich">menu</button>
-
-</header>
-
-

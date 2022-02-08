@@ -32,7 +32,7 @@ include "header.php";
         <div class="row title-row">
             <div class="col-lg-6 col-md-12">
                 <h1 class="big-headings title-heading">
-                    We Deliver Delicious <mark>Food </mark>
+                    We Deliver Delicious <span class="span-title"> Food </span>
                 </h1>
                 <p>
                     Keepingsss it fast and filling your tummy with delicious food and with fast and free delivery.
@@ -55,7 +55,7 @@ include "header.php";
     <div class="container-fluid">
 
         <h2>
-            Your<mark>Favourite</mark>Food Delivery Partner
+            Your<span class="span-title"> Favourite </span>Food Delivery Partner
         </h2>
 
     </div>
@@ -81,22 +81,24 @@ include "header.php";
 </section>
 <!-- TITLE -->
 <section id="popular-food">
+ <div class="container-fluid">
+        <h2>
+            Most Popular<span class="span-title"> Food </span>
+        </h2>
+        <div class="product-list-home">
+        <?php
+        foreach ($products as $key => $value) {
+            echo '<div class="product-list__item">
+                                <img src="'.$value['photo'].'" class="product-list__picture" alt="">
+                                <div class="product-text">'.$value['category'].'</div>
+                                <div class="product-text">'.$value['name'].'</div>
+                                <div class="product-text">'.$value['price'].' din.</div>
+                            </div>';
+        }
+        ?>
+            <div>
+        </div>
 
-    <h2>
-        Most Popular<mark>Food</mark>
-    </h2>
-    <div class="product-list-home">
-    <?php
-    foreach ($products as $key => $value) {
-        echo '<div class="product-list__item">
-                            <img src="'.$value['photo'].'" class="product-list__picture" alt="">
-                            <div class="product-text">'.$value['category'].'</div>
-                            <div class="product-text">'.$value['name'].'</div>
-                            <div class="product-text">'.$value['price'].' din.</div>
-                        </div>';
-    }
-    ?>
-        <div>
 </section>
 
 <section id="about-us">
@@ -107,7 +109,7 @@ include "header.php";
                 <img class="about-img" src="images/Chef-cuate.png" alt="food-delivery">
             </div>
             <div class="col-lg-6  ">
-                <h3>About<mark>Us</mark></h3>
+                <h3>About<span class="span-title"> Us </span></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in finibus purus, eget gravida tortor. Proin vulputate fermentum justo nec auctor. Nunc cursus tellus ut justo convallis fermentum. Sed pulvinar posuere ligula at pharetra. Nunc ut luctus leo. Praesent ut ante sit amet magna pretium pretium. "</p>
                 </p>
                 <p id="more-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in finibus purus, eget gravida tortor. Proin vulputate fermentum justo nec auctor. Nunc cursus tellus ut justo convallis fermentum. Sed pulvinar posuere ligula at pharetra. Nunc ut luctus leo. Praesent ut ante sit amet magna pretium pretium. "</p>

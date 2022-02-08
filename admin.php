@@ -52,7 +52,15 @@ if (isset($_GET['operation'])) {
     // Send sql to server
     if (isset($_GET['submit']) || key($operation) == 'delete') {
         if ($connect->query($sql) == true) {
-            echo "The process ended successfully";
+            // echo "The process ended successfully";
+
+        //    echo "
+        //     <script type=\"text/javascript\">
+        //    alert(\"process ended successfully\");
+        //     </script>
+        // ";
+
+
         }
     }
 }

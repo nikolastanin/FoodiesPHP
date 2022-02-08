@@ -37,15 +37,18 @@ if (isset($sql_str)) {
     }
 }
 ?>
-<br><br><br><br>
-    <section class="main-cover main-cover-products">
+
+    <!-- <section class="main-cover main-cover-products">
         <div class="page-wrapper">
             <div class="block-title block-title--white">Products</div>
         </div>
-    </section>
+    </section> -->
 
-    <section class="product-container-menu">
-        <div class="page-wrapper">
+    <!-- <section class="product-container-menu">
+        <div class="page-wrapper"> -->
+
+        <section id="menu">
+            <h1>Today's menu</h1>
             <form class="product-search" method="get">
                 <input placeholder="Search" name="search" type="text">
                 <button type="submit">Go</button>
@@ -56,20 +59,22 @@ if (isset($sql_str)) {
                     foreach ($products as $key => $value) {
                         echo '<div class="product-list__item">
                                 <img src="'.$value['photo'].'" class="product-list-img" alt="">
-                                <div class="product-list__title">'.$value['category'].'</div>
-                                <div class="product-list__subtitle">'.$value['name'].'</div>
-                                <div class="product-list__price">'.$value['price'].' din.</div>
-                                <button class="product-list__button btn-yellow">add to cart </button>
+                                <div class="product-list__container">
+                                    <h3 class="product-list__title">'.$value['category'].'</h3>
+                                    <h4 class="product-list__subtitle">'.$value['name'].'</h4>
+                                    <p class="product-list__price">'.$value['price'].' din.</p>
+                                    <button class="product-list__button btn-yellow">Add to Cart </button>
+                                </div>
                             </div>';
                     }
                 }
                 else {
-                    echo '<p class="products-error"> Products not found </p>';
+                    echo '<p > Products not found </p>';
                 }
                 ?>
             </div>
-        </div>
-    </section>
+       
+         </section>
 
     <!-- <script src="main.js" async defer ></script> -->
     <!-- <script src="scripts/shopping-cart.js" async defer></script> -->
