@@ -48,17 +48,20 @@ if (isset($sql_str)) {
         <div class="page-wrapper"> -->
 
         <section id="menu">
+            
+                <div class="menu-headings_container"></div>
             <h1>Today's menu</h1>
             <form class="product-search" method="get">
                 <input placeholder="Search" name="search" type="text">
                 <button type="submit">Go</button>
             </form>
-            <div class="product-list-content">
+            </div>
+            <div class="products container-fluid">
                 <?php
                 if (!empty($products)) {
                     foreach ($products as $key => $value) {
                         echo '<div class="product-list__item">
-                                <img src="'.$value['photo'].'" class="product-list-img" alt="">
+                        <img src="'.$value['photo'].'" class="product-list-img" alt="" width="100%">
                                 <div class="product-list__container">
                                     <h3 class="product-list__title">'.$value['category'].'</h3>
                                     <h4 class="product-list__subtitle">'.$value['name'].'</h4>
@@ -73,7 +76,7 @@ if (isset($sql_str)) {
                 }
                 ?>
             </div>
-       
+           
          </section>
 
     <!-- <script src="main.js" async defer ></script> -->

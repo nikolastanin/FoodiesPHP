@@ -40,7 +40,7 @@ bootstrap     -->
       <li class="nav-logo">
       <a href="" class="nav-logo-title"><span class="span-title">Food</span>ies</a>
       </li>
-      
+   
       <li  class="nav-item">
             <a href="index.php">Home</a>
             <!-- <img class="active-icon" src="images/black-circle.png" width="5px"alt=""> -->
@@ -59,24 +59,27 @@ bootstrap     -->
             <a  href="admin.php">Admin </a>
         </li>
         <li  class="nav-item">
-            <span class="cart-icon btn-cart"><img src="images/shopping-cart.png" alt=""><span class="cart-count">(0)</span></span>
+            <!-- <span class="cart-icon btn-cart"><img src="images/shopping-cart.png" alt=""><span class="cart-count">(0)</span></span> -->
+            <button class="cart-icon btn-cart"><img src="images/shopping-cart.png" alt=""><span class="cart-count">(0)</span></button>
            
         
         </li>
+        
         <li class="toggle"></i>
         <img src="images/icons/icon_lines.png"/></li>
     </ul>
 </nav>
-
-<div class="cart-container">
-      <div class="cart-items__container">
-            <!-- <div class="cart-item">
-                
-            </div> -->
-      </div>
-      <div class="cart-buttons">
-          <button class="cart-button__clear">clear</button>
-          <button class="cart-button__checkout">checkout</button>
-      </div>
+<div class="modal">
+    <div class="cart-container">
+        <div class="cart-items__container">
+                <!-- <div class="cart-item">
+                    
+                </div> -->
+        </div>
+        <div class="cart-buttons">
+            <button class="cart-button__clear">clear</button>
+            <button class="cart-button__checkout">checkout</button>
+        </div>
     </div>
-    <button class="btn-yellow"id="sandwich">menu</button>
+</div>
+    <!-- <button class="btn-yellow"id="sandwich">menu</button> -->

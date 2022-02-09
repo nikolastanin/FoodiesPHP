@@ -10,17 +10,21 @@ const showNav = () =>{
 
     
       navItems.forEach(element => {
-          if(element.style.display !== "block"){
+     
+        console.log(element.className);
+         if(element.className==="nav-item") {
+            element.classList.add("show");
+         }
+         else{
+                       toggle.innerHTML = ` <img src="images/icons/icon_lines.png"/>`;
+            element.className ="nav-item"
+         }
+         });
+    }
+      
+    
 
-          toggle.innerHTML = ` <img src="images/icons/icon_close.png"/>`;
-          element.style.display = "block";
-          
-        }
-        else{
-            toggle.innerHTML = ` <img src="images/icons/icon_lines.png"/>`;
-            element.style.display ="none";
-        }
-      });
-}
+
+
 
 toggle.addEventListener("click",showNav);

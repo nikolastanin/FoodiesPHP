@@ -80,9 +80,9 @@ include "header.php";
     </div>
 </section>
 
-<section class="container-fluid">
-    <div class="page-wrapper">
-        <form method="GET">
+<section id="admin">
+    <div class="container-fluid">
+        <form class="admin-form"method="GET">
             <table class="admin__table">
                 <tr class="first">
                     <td>id</td>

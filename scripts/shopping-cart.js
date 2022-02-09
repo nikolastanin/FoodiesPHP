@@ -5,7 +5,8 @@ const buttons = document.querySelectorAll(".product-list__button");
 const cartBtn = document.querySelector(".btn-cart");
 const clearBtn = document.querySelector(".cart-button__clear");
 const checkoutBtn = document.querySelector(".cart-button__checkout");
-const cartContainer = document.querySelector(".cart-container");
+const modal = document.querySelector(".modal");
+// const cartContainer = document.querySelector(".cart-container");
 const cartItemsContainer = document.querySelector(".cart-items__container");
 const cartItemsCount = document.querySelector(".cart-count");
 console.log(cartBtn);
@@ -179,13 +180,13 @@ cartElements.push(cartItem);
 
 //Showign the cart on user click
 const showCart = () =>{
-
-   if( cartContainer.style.display==""){
-    cartContainer.style.display = "block";
+console.log("SHOW CART");
+   if( modal.style.display==""){
+    modal.style.display = "block";
    } 
    else
    {
-    cartContainer.style.display="";
+    modal.style.display="";
    }
 }
 
