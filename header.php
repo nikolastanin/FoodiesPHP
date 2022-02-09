@@ -63,7 +63,8 @@ bootstrap     -->
            
         
         </li>
-        <!-- <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li> -->
+        <li class="toggle"></i>
+        <img src="images/icons/icon_lines.png"/></li>
     </ul>
 </nav>
 

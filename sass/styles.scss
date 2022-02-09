@@ -126,7 +126,7 @@ nav{
        padding: 0 7% ;
        transition: all 0.3s ease;
     z-index: 1;
-    // background-color: red;
+    background-color: white;
     // text-align: center;
 
     .nav-logo{
@@ -176,7 +176,8 @@ nav{
    
    
     .toggle{
-        order:1;
+        display: none;
+        padding: 5px;
     }
 }
 
@@ -439,14 +440,27 @@ footer{
 
   @media screen and (max-width:1095px) {
       nav {
+        // transition: all 2s ease;
+       background-color: white;
+       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
           .nav-logo{
               width: 100%;
             //   display: flex;
             //   justify-content: center;
           }
         .nav-item{
+            display: none;
             justify-content:center;
             width: 100%;
+          }
+          .toggle{
+              display: block;
+              width: 100%;
+            
+          }
+          .toggle img:hover{
+              color: $paragraph-color;
+              cursor: pointer;
           }
       }
     
