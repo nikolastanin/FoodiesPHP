@@ -75,6 +75,7 @@ include "header.php";
 
     </div>
     </div>
+    
 </section>
 <!-- TITLE -->
 <section id="popular-food">
@@ -87,9 +88,11 @@ include "header.php";
         foreach ($products as $key => $value) {
             echo '<div class="popular-food__item">
                                 <img src="'.$value['photo'].'" class="product-list__picture" alt="">
-                                <div class="product-text">'.$value['category'].'</div>
-                                <div class="product-text">'.$value['name'].'</div>
-                                <div class="product-text">'.$value['price'].' din.</div>
+                                <div class="popular-food__text"> 
+                                    <div class="product-text">'.$value['category'].'</div>
+                                    <div class="product-text">'.$value['name'].'</div>
+                                    <div class="product-text">'.$value['price'].' din.</div>
+                                </div> 
                             </div>';
         }
         ?>

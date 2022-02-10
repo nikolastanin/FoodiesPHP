@@ -168,12 +168,17 @@ input {
     justify-content: space-around;
     width: 100%; }
   #popular-food .popular-food__item {
+    min-width: 100px;
     width: 30%;
     background-color: white;
-    border: 5px solid #FF9D02;
+    transition: 0.3s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 30px;
-    transition: 0.3s; }
+    border-radius: 30px; }
+    #popular-food .popular-food__item:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+    #popular-food .popular-food__item .popular-food__text {
+      border: 0 0 30px 30px;
+      width: 100%; }
     #popular-food .popular-food__item img {
       border-radius: 30px 30px 0 0;
       width: 100%; }

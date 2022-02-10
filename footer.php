@@ -65,17 +65,15 @@
             Useful links
           </h6>
           <p>
-            <a href="#!" class="text-reset">Pricing</a>
+            <a href="#" class="text-reset">Home</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Settings</a>
+            <a href="menu.php" class="text-reset">Menu</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Orders</a>
+            <a href="index.php#about-uss" class="text-reset">About us</a>
           </p>
-          <p>
-            <a href="#!" class="text-reset">Help</a>
-          </p>
+         
         </div>
         <!-- Grid column -->
 
