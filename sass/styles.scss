@@ -194,6 +194,19 @@ nav.sticky{
 .btn-cart:hover{
 
 }
+
+//input field
+input{
+    width:50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
+}
 // TEXT
 .big-headings{
     font-size: 5rem;
@@ -240,6 +253,34 @@ nav.sticky{
 //popular food 
 #popular-food{
     text-align: center;
+    h2{
+            margin: 200px 0 100px 0;
+            font-size: 3rem;
+    }
+   
+    .popular-food__container{
+        
+        display: flex;
+        flex-wrap: wrap;
+       justify-content: space-around;
+        width: 100%;
+        // background-color: red;
+    }
+
+    .popular-food__item{
+        // min-width: 100px;
+        width: 30%;
+        background-color: white;
+        border: 5px solid $primary-color;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border-radius: 30px;
+        transition: 0.3s;
+       
+            img{
+                border-radius: 30px 30px 0 0 ;
+                width: 100%;
+            }
+    }
 }
 
 
@@ -367,8 +408,15 @@ text-align: center;
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  
+}
+
+#modal-close__btn{
+
 }
 .cart-container{
+  
     position: relative;
   background-color: white;
     margin: auto;
@@ -381,11 +429,16 @@ text-align: center;
     animation-name: animatetop;
     animation-duration: 0.4s
 }
+.cart-items__container{
+    // display: flex;
+    // flex-wrap: wrap;
+}
 .cart-item{
     width: 100%;
+    display: flex;
     background-color: $primary-color;
     margin-bottom: 5px;
-    padding: 5px;
+    padding: 2%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 30px;
 
