@@ -38,17 +38,17 @@ started_btn.addEventListener("click",scrollToFunc);
 //     header.classList.toggle("sticky",window.scrollY >0);
 // })
 //navbar
-let x = document.getElementById("sandwich");
-let navbar = document.getElementById("navbar-list");
-let y =  document.getElementById("cart-cont");
+// let x = document.getElementById("sandwich");
+// let navbar = document.getElementById("navbar-list");
+// let y =  document.getElementById("cart-cont");
 
-//menu FIX THIS ! not activating in responsive mode
-const activateMenu = () =>{
-      navbar.style.display ="flex";
-      x.style.display = "none";
-     // y.style.display = "none";
-}
-x.addEventListener("click", activateMenu);
+// //menu FIX THIS ! not activating in responsive mode
+// const activateMenu = () =>{
+//       navbar.style.display ="flex";
+//       x.style.display = "none";
+//      // y.style.display = "none";
+// }
+// x.addEventListener("click", activateMenu);
 
 
 

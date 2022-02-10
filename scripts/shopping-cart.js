@@ -6,6 +6,7 @@ const cartBtn = document.querySelector(".btn-cart");
 const clearBtn = document.querySelector(".cart-button__clear");
 const checkoutBtn = document.querySelector(".cart-button__checkout");
 const modal = document.querySelector(".modal");
+const body = document.getElementsByName("body");
 // const cartContainer = document.querySelector(".cart-container");
 const cartItemsContainer = document.querySelector(".cart-items__container");
 const cartItemsCount = document.querySelector(".cart-count");
@@ -181,15 +182,28 @@ cartElements.push(cartItem);
 //Showign the cart on user click
 const showCart = () =>{
 console.log("SHOW CART");
-   if( modal.style.display==""){
+if(cartElements.length==0){
+    alert("Your cart is empty. Add some items to the cart...")
+
+}else{
+
+
+   if( modal.style.display!=="block"){
     modal.style.display = "block";
+   
    } 
    else
    {
-    modal.style.display="";
+    modal.style.display="none";
    }
 }
-
+}
+//click outside modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 
 // Checking if the cart is empty
 // const checkEmpty = () =>{

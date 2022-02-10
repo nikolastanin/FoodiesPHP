@@ -1,7 +1,7 @@
 <?php
 ?>
 
-<footer id="footer">
+<footer>
     <a class="logofooter" href="">Foodies</a>
     <ul>
         <h5>About us:</h5>

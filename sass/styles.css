@@ -14,6 +14,11 @@ body {
   text-align: center;
   font-family: Poppins;
   overflow-x: hidden;
+  background-color: pink;
+}
+
+ul {
+  padding-left: 0;
 }
 
 h1, h2, h3, h4, h5, h6, a {
@@ -33,8 +38,7 @@ p {
   font-weight: 500;
   line-height: 2rem;
   width: 50%;
-  margin: auto;
-  text-align: center;
+  text-align: left;
 }
 
 .container-fluid {
@@ -193,12 +197,15 @@ nav.sticky {
 
 /* FEATURES section */
 #features-section {
-  margin-bottom: 300px;
+  overflow: hidden;
 }
 
-.feature-img {
-  /* background-color: red; */
-  width: 50%;
+#features-section .feature-box {
+  min-width: 400px;
+}
+
+#features-section .feature-box .feature-img {
+  width: 30%;
 }
 
 #about-us .about-img {
@@ -347,7 +354,7 @@ footer ul b {
 
 .cart-container {
   position: relative;
-  background-color: #fefefe;
+  background-color: white;
   margin: auto;
   padding: 2%;
   border: 1px solid #888;
@@ -365,7 +372,8 @@ footer ul b {
   background-color: #FF9D02;
   margin-bottom: 5px;
   padding: 5px;
-  border: 2px solid red;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 30px;
 }
 
@@ -399,18 +407,70 @@ footer ul b {
   display: block !important;
 }
 
-@media (min-width: 600px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: red;
+  }
+  #title .title-heading {
+    font-size: 3rem;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  #title p {
+    font-size: 1rem;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .product-list__item img {
+    overflow: hidden;
+    width: 100%;
+  }
+  .product-list__item ul {
+    padding-left: 0  !important;
+  }
+  footer {
+    overflow: hidden;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    background-color: orange;
+  }
   .products {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Screen larger than 900px? 3 columns */
-@media (min-width: 900px) {
+/* Medium devices (landscape tablets, 768pxd up) */
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: yellow;
+  }
+  #title p {
+    text-align: left;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
   .products {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
+  }
+  body {
+    background-color: blue;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    background-color: green;
   }
 }
 
@@ -424,6 +484,7 @@ footer ul b {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
+    text-align: center;
   }
   .title-image {
     margin-left: 0;

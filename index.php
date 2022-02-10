@@ -25,9 +25,6 @@ include "header.php";
 <section  id="title">
     <div class="container-fluid">
 
-
-
-
         <!-- TITLE -->
         <div class="row title-row">
             <div class="col-lg-6 col-md-12">
@@ -110,9 +107,9 @@ include "header.php";
             </div>
             <div class="col-lg-6  ">
                 <h3>About<span class="span-title"> Us </span></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in finibus purus, eget gravida tortor. Proin vulputate fermentum justo nec auctor. Nunc cursus tellus ut justo convallis fermentum. Sed pulvinar posuere ligula at pharetra. Nunc ut luctus leo. Praesent ut ante sit amet magna pretium pretium. "</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in finibus purus, eget gravida tortor. Proin vulputate fermentum justo nec auctor. Nunc cursus tellus ut justo convallis fermentum. Sed pulvinar posuere ligula at pharetra. Nunc ut luctus leo. Praesent ut ante sit amet magna pretium pretium.1 "</p>
                 </p>
-                <p id="more-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in finibus purus, eget gravida tortor. Proin vulputate fermentum justo nec auctor. Nunc cursus tellus ut justo convallis fermentum. Sed pulvinar posuere ligula at pharetra. Nunc ut luctus leo. Praesent ut ante sit amet magna pretium pretium. "</p>
+                <p id="more-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in finibus purus, eget gravida tortor. Proin vulputate fermentum justo nec auctor. Nunc cursus tellus ut justo convallis fermentum. Sed pulvinar posuere ligula at pharetra. Nunc ut luctus leo. Praesent ut ante sit amet magna pretium pretium.2 "</p>
                 </p>
                 <button id="view-btn"class="btn-yellow btn-transparent">View more</button>
             </div>

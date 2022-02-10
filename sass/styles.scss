@@ -18,8 +18,13 @@ body{
     text-align: center;
     font-family: Poppins;
     overflow-x: hidden;
-//   background-color: pink;
     
+    // overflow-y: visible;
+  background-color: pink;
+    // 
+}
+ul{
+    padding-left: 0;
 }
 
 h1,h2,h3,h4,h5,h6,a{
@@ -43,8 +48,8 @@ p{
     font-weight: 500;
     line-height: 2rem;
     width: 50%;
-    margin: auto;
-     text-align: center;
+    // margin: auto;
+     text-align: left;
 }
 
 
@@ -215,13 +220,22 @@ nav.sticky{
 
 /* FEATURES section */
 #features-section{
-    margin-bottom: 300px;
+    overflow: hidden;
+    .feature-box{
+        min-width: 400px;
+        .feature-img{
+            width: 30%;
+        }
+    }
 }
-.feature-img{
-    /* background-color: red; */
-    width: 50%;
+// #features-section{
+//     margin-bottom: 300px;
+// }
+// .feature-img{
+//     /* background-color: red; */
+//     width: 50%;
    
-}
+// }
 
 
 
@@ -398,7 +412,7 @@ footer{
 }
 .cart-container{
     position: relative;
-    background-color: #fefefe;
+  background-color: white;
     margin: auto;
     padding: 2%;
     border: 1px solid #888;
@@ -414,8 +428,9 @@ footer{
     background-color: $primary-color;
     margin-bottom: 5px;
     padding: 5px;
-    border: 2px solid red;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 30px;
+
 }
 //animations for modal 
 @-webkit-keyframes animatetop {
@@ -438,21 +453,96 @@ footer{
 .show{
     display: block !important;
 }
-// MEDIA QUERIES
-//queries for menu page responsive  list of items
-@media (min-width: 600px) {
-    .products{ grid-template-columns: repeat(2, 1fr); }
-  }
-  
-  /* Screen larger than 900px? 3 columns */
-  @media (min-width: 900px) {
-    .products{ grid-template-columns: repeat(3, 1fr); }
-  }
 
+
+// MEDIA QUERIES
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: red;
+    }
+    #title{
+        .title-heading{
+            font-size: 3rem;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        p{
+            // color:blue;
+            font-size: 1rem;
+            // text-align: center;
+            margin: auto;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+    #features-section{
+        
+    }
+    
+    .product-list__item {
+        img{
+        overflow: hidden;
+        width: 100%;
+    }
+    
+       ul{
+            padding-left: 0  !important;
+        }
+    
+
+
+}
+footer{
+    overflow: hidden;
+}
+    //items are deafulted to this size so 
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    body{
+        background-color:orange;
+    }
+    .products{ grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Medium devices (landscape tablets, 768pxd up) */
+@media only screen and (min-width: 768px) {
+    body{
+        background-color: yellow;
+    }
+    
+        #title p{
+            // margin:auto;
+            text-align: left;
+        }
+    
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .products{ grid-template-columns: repeat(3, 1fr); }
+    body{
+        background-color: blue;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    body{
+        background-color: green;
+    }
+}
 
 
 @media screen and (max-width:1095px) {
-   
+   body{
+    //    background-color: black !important;
+   }
 
     p{
         //vrati na 100
@@ -464,6 +554,11 @@ footer{
     .title-row{
         flex-direction: column;
         width: 100%;
+        text-align: center;
+        p{
+            // margin:auto;
+            // text-align: center;
+        }
     }
     .title-image{
        margin-left:0;
