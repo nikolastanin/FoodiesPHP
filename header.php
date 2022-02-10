@@ -30,7 +30,7 @@ bootstrap     -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
             <link rel="stylesheet" href="css/styles.css">
-            
+
         </head>
 <body>
 
@@ -71,16 +71,28 @@ bootstrap     -->
         <img src="images/icons/icon_lines.png"/></li>
     </ul>
 </nav>
+<div class="alert-box">
+<div class="alert alert-warning" role="alert">
+  This is a warning alert—check it out!
+</div>
+</div>
 <div class="modal">
+
     <div class="cart-container">
+        <span id="modal-close__btn"> <img src="images/icons/icon_close.png"/></span>
+    <h3>Your cart items</h3>
+    <hr>
         <div class="cart-items__container">
                 <!-- <div class="cart-item">
                     
                 </div> -->
         </div>
+        <hr>
+        <p id="price-text">Your total:</p>
+        <hr>
         <div class="cart-buttons">
-            <button class="cart-button__clear">clear</button>
-            <button class="cart-button__checkout">checkout</button>
+            <button class="cart-button__clear btn btn-danger">clear</button>
+            <button class="cart-button__checkout btn btn-success">checkout</button>
         </div>
     </div>
 </div>

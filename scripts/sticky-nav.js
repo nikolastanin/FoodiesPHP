@@ -14,6 +14,7 @@ const showNav = () =>{
         console.log(element.className);
          if(element.className==="nav-item") {
             element.classList.add("show");
+            toggle.innerHTML = ` <img src="images/icons/icon_close.png"/>`;
          }
          else{
                        toggle.innerHTML = ` <img src="images/icons/icon_lines.png"/>`;

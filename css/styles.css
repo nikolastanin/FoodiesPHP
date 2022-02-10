@@ -115,6 +115,16 @@ nav.sticky {
   border-style: none;
   border-radius: 30px; }
 
+input {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); }
+
 .big-headings {
   font-size: 5rem; }
 
@@ -149,6 +159,24 @@ nav.sticky {
 
 #popular-food {
   text-align: center; }
+  #popular-food h2 {
+    margin: 200px 0 100px 0;
+    font-size: 3rem; }
+  #popular-food .popular-food__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%; }
+  #popular-food .popular-food__item {
+    width: 30%;
+    background-color: white;
+    border: 5px solid #FF9D02;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    transition: 0.3s; }
+    #popular-food .popular-food__item img {
+      border-radius: 30px 30px 0 0;
+      width: 100%; }
 
 #about-us {
   text-align: center; }
@@ -233,6 +261,14 @@ nav.sticky {
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
   /* Black w/ opacity */ }
+  .modal .delete-item__btn {
+    border-radius: 30%; }
+
+#modal-close__btn {
+  position: absolute;
+  right: 50px; }
+  #modal-close__btn:hover {
+    cursor: pointer; }
 
 .cart-container {
   position: relative;
@@ -249,11 +285,14 @@ nav.sticky {
 
 .cart-item {
   width: 100%;
+  display: flex;
   background-color: #FF9D02;
   margin-bottom: 5px;
-  padding: 5px;
+  padding: 2%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 30px; }
+  .cart-item p {
+    color: black; }
 
 @-webkit-keyframes animatetop {
   from {
@@ -309,7 +348,19 @@ footer {
     padding-left: 0  !important; }
 
   footer p, footer a {
-    text-align: center; } }
+    text-align: center; }
+
+  .modal #modal-close__btn {
+    right: 20px; }
+  .modal input#quantityBox {
+    width: 30px;
+    padding: 5px;
+    margin: 20px;
+    height: 50px; }
+  .modal .delete-item__btn {
+    padding: 0;
+    height: 50px;
+    margin: 20px; } }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .products {

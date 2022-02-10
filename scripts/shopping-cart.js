@@ -7,6 +7,7 @@ const clearBtn = document.querySelector(".cart-button__clear");
 const checkoutBtn = document.querySelector(".cart-button__checkout");
 const modal = document.querySelector(".modal");
 const body = document.getElementsByName("body");
+const modalCloseBtn = document.querySelector("#modal-close__btn");
 // const cartContainer = document.querySelector(".cart-container");
 const cartItemsContainer = document.querySelector(".cart-items__container");
 const cartItemsCount = document.querySelector(".cart-count");
@@ -16,6 +17,9 @@ const checkoutContainer = document.querySelector(".checkout-container");
 let cartElements = [];
 let  itemCount;
 let  quantityBox="";
+
+let totalPrice = document.querySelector("#price-text");
+let price = 0;
 //    TO DO 
   //POP UP ICON WHEN ADD ITEMM !? 
         //TOTAL PRICE ??
@@ -26,27 +30,40 @@ let  quantityBox="";
         //POSLE CLEAR-A --->>>> SHOW I UPDATE LOCAL STORAGE FUNKCIJE.. 
         //MENU U RESPONSIVU MODU NE RADI BUTTON
        
-
+        
 
 //Displaying CartItems
 const showData = () =>{
     let string ="";
+   
     itemCount = 0;
     //ovo si mutovao
         cartElements.forEach(element => {
         //   counting items in cart
             itemCount++;
+            // element.quantity = 1;
             console.log(element.title+` = element broj [${itemCount}]`);
             string+= ` <div class="cart-item" id="${element.id}">
+            <p>#${itemCount}</p>
             <p id="${element.id}">${element.title}</p>
             <input type="number" id="quantityBox" name="quantity" min="1" max="5" value="${element.quantity}">
-            <p>${element.quantity}</p>
-            <button id="${element.id}" class="delete-item__btn">delete</button>
+            <p>${element.price} din.</p>
+            <button id="${element.id}" class="btn btn-danger delete-item__btn">delete</button>
+           
         </div>`;
         cartItemsContainer.innerHTML = string;
-        
         cartItemsCount.textContent = `${"("+itemCount+")"}`;
 
+        // total += element.price *element.quantity;
+        // console.log(totalPrice);
+        // totalPrice.innerHTML = `Your price: ${total}`;
+     
+   
+        // totalPrice.innerHTML = `Your price: ${totalCalc(element.price,element.quantity,total)}`;
+    
+           
+       
+            // totalPrice.innerHTML = `Your price is :${ totalCalc(element)}`;
       
         });
 
@@ -67,6 +84,14 @@ const showData = () =>{
       
 }
     
+
+const totalCalc = (element) =>{
+//    let x ;
+//    price += element.quantity * element.price;
+//    x = price;
+//    return x ; 
+}
+
 
 const deleteItem = (e)=>{
 
@@ -120,7 +145,10 @@ const deleteItem = (e)=>{
         //   console.log(update);
           update.quantity = value;
         //   console.log(update);
+        //totalQuantity
         updateLocalStorage();
+        // totalCalc(update);
+        // showData();
 
 
     }
@@ -168,7 +196,7 @@ const addItem = (e) =>{
  let price = e.currentTarget.previousSibling.previousSibling.textContent;
 cartItem.price = price.substring(0,price.length-4);
 cartItem.title = e.currentTarget.previousSibling.previousSibling.previousSibling.previousSibling.textContent;
-cartItem.quantity = 0;
+cartItem.quantity = 1;
 cartItem.id = Date.now();
 cartElements.push(cartItem);
 
@@ -179,12 +207,13 @@ cartElements.push(cartItem);
 
 
 
-//Showign the cart on user click
+//Showign the cart modal on user click
 const showCart = () =>{
 console.log("SHOW CART");
 if(cartElements.length==0){
-    alert("Your cart is empty. Add some items to the cart...")
-
+     alert("Your cart is empty. Add some items to the cart...")
+       
+        
 }else{
 
 
@@ -204,14 +233,18 @@ window.onclick = function(event) {
       modal.style.display = "none";
     }
   }
+//Close cart modal
 
-// Checking if the cart is empty
-// const checkEmpty = () =>{
-//     if(cartElements.length==0){
-//         return true;
-//     }
-//     return false;
-// }
+const closeCart = () =>{
+    if( modal.style.display!=="block"){
+        modal.style.display = "block";
+       
+       } 
+       else
+       {
+        modal.style.display="none";
+       }
+}
 
 
 //clearing cart elements from body and array
@@ -263,3 +296,4 @@ buttons.forEach(element => {
 cartBtn.addEventListener("click",showCart);
 clearBtn.addEventListener("click",clearCart);
 checkoutBtn.addEventListener("click",checkout)
+modalCloseBtn.addEventListener("click",closeCart);

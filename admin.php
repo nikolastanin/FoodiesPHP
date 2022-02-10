@@ -124,7 +124,7 @@ include "header.php";
                 <div class="update__item"><input placeholder="Price" type="text" name="price" value="<?php if(isset($update)){echo $update['price'];} ?>"></div>
                 <div class="update__item"><input placeholder="Photo" type="text" name="photo" value="<?php if(isset($update)){echo $update['photo'];} ?>"></div>
                 <div class="update__item"><input placeholder="Availability" type="text" name="availability" value="<?php if(isset($update)){echo $update['availability'];} ?>"></div>
-                <button class="admin__table-new btn-yellow" type="submit" name="submit" value="true">Send</button>
+                <button class="admin__table-new btn-yellow" style="margin: 10px;" type="submit" name="submit" value="true">Send</button>
             </form>
         </div>
     </section>

@@ -409,12 +409,18 @@ text-align: center;
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
-  
+  .delete-item__btn{
+    border-radius:30%;
+  }
 }
 
 #modal-close__btn{
-
+        position: absolute;
+       right:50px;
+&:hover{
+    cursor: pointer;
 }
+    }
 .cart-container{
   
     position: relative;
@@ -429,10 +435,7 @@ text-align: center;
     animation-name: animatetop;
     animation-duration: 0.4s
 }
-.cart-items__container{
-    // display: flex;
-    // flex-wrap: wrap;
-}
+
 .cart-item{
     width: 100%;
     display: flex;
@@ -441,6 +444,9 @@ text-align: center;
     padding: 2%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 30px;
+   p{
+    color:black;
+   }
 
 }
 //animations for modal 
@@ -521,8 +527,7 @@ footer{
             padding-left: 0  !important;
         }
     
-
-
+      
 }
 footer{
     p,a{
@@ -530,8 +535,25 @@ footer{
     }
  
 }
+.modal{
+    #modal-close__btn{
+        right: 20px;
+    }
+    input#quantityBox{
+            width: 30px;
+            padding: 5px;
+            margin: 20px;
+            height: 50px;
+    }
+    .delete-item__btn{
+        padding: 0;
+        height: 50px;
+        margin: 20px;
+    }
+}
 
-    //items are deafulted to this size so 
+
+    
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

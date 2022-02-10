@@ -53,7 +53,7 @@ if (isset($sql_str)) {
             <h1>Today's menu</h1>
             <form class="product-search" method="get">
                 <input placeholder="Search" name="search" type="text">
-                <button type="submit">Go</button>
+                <button class="btn btn-yellow"type="submit">Go</button>
             </form>
             </div>
             <div class="products container-fluid">

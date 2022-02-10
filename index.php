@@ -82,10 +82,10 @@ include "header.php";
         <h2>
             Most Popular<span class="span-title"> Food </span>
         </h2>
-        <div class="product-list-home">
+        <div class="popular-food__container">
         <?php
         foreach ($products as $key => $value) {
-            echo '<div class="product-list__item">
+            echo '<div class="popular-food__item">
                                 <img src="'.$value['photo'].'" class="product-list__picture" alt="">
                                 <div class="product-text">'.$value['category'].'</div>
                                 <div class="product-text">'.$value['name'].'</div>
