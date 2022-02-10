@@ -10,11 +10,8 @@ html {
 }
 
 body {
-  background-color: white;
-  text-align: center;
   font-family: Poppins;
   overflow-x: hidden;
-  background-color: pink;
 }
 
 ul {
@@ -26,19 +23,14 @@ h1, h2, h3, h4, h5, h6, a {
   color: #232323;
 }
 
-h2 {
-  font-size: 3rem;
-  width: 50%;
-  margin: 100px auto;
-}
-
 p {
   color: #8E8E8E;
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 2rem;
   width: 50%;
-  text-align: left;
+  margin: auto;
+  text-align: center;
 }
 
 .container-fluid {
@@ -54,11 +46,11 @@ nav {
   transition: all 0.3s ease;
   z-index: 1;
   background-color: white;
+  text-align: center;
 }
 
 nav .nav-logo {
   font-size: 2rem;
-  text-align: center;
 }
 
 nav .nav-menu {
@@ -182,6 +174,7 @@ nav.sticky {
 #title p {
   margin: 50px 0;
   text-align: left;
+  width: 70%;
 }
 
 .title-row {
@@ -189,14 +182,14 @@ nav.sticky {
 }
 
 .title-image {
-  margin-left: 200px;
-  width: 80%;
+  width: 100%;
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 
 /* FEATURES section */
 #features-section {
+  text-align: center;
   overflow: hidden;
 }
 
@@ -206,6 +199,21 @@ nav.sticky {
 
 #features-section .feature-box .feature-img {
   width: 30%;
+}
+
+#features-section h2 {
+  font-size: 3rem;
+  width: 50%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+#popular-food {
+  text-align: center;
+}
+
+#about-us {
+  text-align: center;
 }
 
 #about-us .about-img {
@@ -224,43 +232,6 @@ nav.sticky {
   margin-bottom: 50px;
 }
 
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #fdb435;
-  opacity: 0.9;
-}
-
-footer h5 {
-  color: #232323;
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-
-footer b {
-  font-weight: 300;
-}
-
-footer a:hover {
-  color: white;
-}
-
-footer .logofooter {
-  font-size: 1.5rem;
-  color: white;
-}
-
-footer ul b {
-  padding: 20px;
-}
-
 .span-title {
   color: #FF9D02;
   background-color: transparent;
@@ -268,6 +239,10 @@ footer ul b {
 
 #sandwich {
   display: none;
+}
+
+#menu {
+  text-align: center;
 }
 
 #menu .menu-headings_container {
@@ -316,17 +291,29 @@ footer ul b {
   width: 100%;
 }
 
-.admin__table td {
+#admin {
+  text-align: center;
+}
+
+#admin .admin__table td {
   padding: 5px;
 }
 
-.admin-form .admin__table {
+#admin .admin-form .admin__table {
   display: inline;
 }
 
-.admin-form button.admin__table-new.btn-yellow {
+#admin .admin-form button.admin__table-new.btn-yellow {
   display: block;
   margin: 0 auto;
+}
+
+#admin .block {
+  background-color: red;
+}
+
+#admin .block .page-wrapper {
+  text-align: center;
 }
 
 .modal {
@@ -340,6 +327,7 @@ footer ul b {
   /* Location of the box */
   left: 0;
   top: 0;
+  text-align: center;
   width: 100%;
   /* Full width */
   height: 100%;
@@ -407,11 +395,25 @@ footer ul b {
   display: block !important;
 }
 
+footer {
+  font-weight: 400;
+  background-color: #FF9D02;
+  padding-top: 10px;
+}
+
+footer h6 {
+  color: #232323;
+}
+
+footer span, footer p, footer a {
+  width: 100%;
+  color: white;
+  text-align: left;
+  opacity: 70%;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: red;
-  }
   #title .title-heading {
     font-size: 3rem;
     width: 100%;
@@ -423,6 +425,9 @@ footer ul b {
     width: 100%;
     margin-bottom: 50px;
   }
+  #features-section h2 {
+    width: 100%;
+  }
   .product-list__item img {
     overflow: hidden;
     width: 100%;
@@ -430,27 +435,34 @@ footer ul b {
   .product-list__item ul {
     padding-left: 0  !important;
   }
-  footer {
-    overflow: hidden;
+  footer p, footer a {
+    text-align: center;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  body {
-    background-color: orange;
-  }
   .products {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+  }
+  #title h1 {
+    font-size: 3rem;
+  }
+  #title p {
+    text-align: center;
+    margin: auto;
+  }
+  #features-section h2 {
+    width: 100%;
+  }
+  footer p, footer a {
+    text-align: left;
   }
 }
 
 /* Medium devices (landscape tablets, 768pxd up) */
 @media only screen and (min-width: 768px) {
-  body {
-    background-color: yellow;
-  }
   #title p {
     text-align: left;
   }
@@ -462,18 +474,20 @@ footer ul b {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
-  body {
-    background-color: blue;
+  body #title h1 {
+    font-size: 5rem;
+  }
+  body #title p {
+    margin: 0;
+    text-align: left;
+    padding: 3rem 0;
+  }
+  footer p, footer a {
+    text-align: left;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  body {
-    background-color: green;
-  }
-}
-
 @media screen and (max-width: 1095px) {
   .feature-img {
     width: 80%;

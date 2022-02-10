@@ -74,13 +74,11 @@ if ($result = $connect -> query($sql)) {
 include "header.php";
 ?>
 <br><br><br><br><br><br>
-<section class="titless">
-    <div class="page-wrapper">
-        <div class="block-title block-title--white">Admin</div>
-    </div>
-</section>
+
+
 
 <section id="admin">
+    <h1>Admin page</h1>
     <div class="container-fluid">
         <form class="admin-form"method="GET">
             <table class="admin__table">
@@ -114,7 +112,9 @@ include "header.php";
 </section>
 
 <?php if (isset($update) || isset($add_new)) { ?>
-    <section class="block">
+    <section class="block" style="
+    text-align: center;
+">
         <div class="page-wrapper">
             <h1>Enter the data</h1>
             <form class="admin__update" method="GET">

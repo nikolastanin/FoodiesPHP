@@ -7,11 +7,8 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  background-color: white;
-  text-align: center;
   font-family: Poppins;
-  overflow-x: hidden;
-  background-color: pink; }
+  overflow-x: hidden; }
 
 ul {
   padding-left: 0; }
@@ -20,18 +17,14 @@ h1, h2, h3, h4, h5, h6, a {
   font-weight: 700;
   color: #232323; }
 
-h2 {
-  font-size: 3rem;
-  width: 50%;
-  margin: 100px auto; }
-
 p {
   color: #8E8E8E;
   font-size: 1.2rem;
   font-weight: 500;
   line-height: 2rem;
   width: 50%;
-  text-align: left; }
+  margin: auto;
+  text-align: center; }
 
 .container-fluid {
   padding: 3% 7%; }
@@ -43,10 +36,10 @@ nav {
   padding: 0 7%;
   transition: all 0.3s ease;
   z-index: 1;
-  background-color: white; }
+  background-color: white;
+  text-align: center; }
   nav .nav-logo {
-    font-size: 2rem;
-    text-align: center; }
+    font-size: 2rem; }
   nav .nav-menu {
     margin-top: 12px;
     display: flex;
@@ -130,53 +123,43 @@ nav.sticky {
   margin-top: 200px; }
   #title p {
     margin: 50px 0;
-    text-align: left; }
+    text-align: left;
+    width: 70%; }
 
 .title-row {
   text-align: left; }
 
 .title-image {
-  margin-left: 200px;
-  width: 80%;
+  width: 100%;
   transform: scaleX(-1); }
 
 /* FEATURES section */
 #features-section {
+  text-align: center;
   overflow: hidden; }
   #features-section .feature-box {
     min-width: 400px; }
     #features-section .feature-box .feature-img {
       width: 30%; }
+  #features-section h2 {
+    font-size: 3rem;
+    width: 50%;
+    margin: 100px auto;
+    text-align: center; }
 
-#about-us .about-img {
-  width: 100%; }
-#about-us #more-txt {
-  display: none; }
-#about-us h3 {
-  margin: 70px 0 30px 0; }
-#about-us p {
-  margin-bottom: 50px; }
+#popular-food {
+  text-align: center; }
 
-footer {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
-  align-items: center;
-  background-color: #fdb435;
-  opacity: 0.9; }
-  footer h5 {
-    color: #232323;
-    font-size: 1.2rem;
-    font-weight: 500; }
-  footer b {
-    font-weight: 300; }
-  footer a:hover {
-    color: white; }
-  footer .logofooter {
-    font-size: 1.5rem;
-    color: white; }
-  footer ul b {
-    padding: 20px; }
+#about-us {
+  text-align: center; }
+  #about-us .about-img {
+    width: 100%; }
+  #about-us #more-txt {
+    display: none; }
+  #about-us h3 {
+    margin: 70px 0 30px 0; }
+  #about-us p {
+    margin-bottom: 50px; }
 
 .span-title {
   color: #FF9D02;
@@ -185,41 +168,48 @@ footer {
 #sandwich {
   display: none; }
 
-#menu .menu-headings_container {
-  margin-top: 100px; }
-#menu .products {
-  max-width: 90%;
-  margin: 0 auto;
-  display: grid;
-  grid-gap: 3rem; }
-#menu img {
-  border-radius: 30px  30px 0 0; }
-#menu .product-list__item {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  padding: 0rem;
-  height: auto;
-  border-radius: 30px; }
-#menu .product-list__item:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
-#menu .product-list__container {
-  padding: 2%; }
-  #menu .product-list__container h3, #menu .product-list__container h4 {
-    color: #232323;
-    text-shadow: #8E8E8E;
-    opacity: 80%;
-    font-weight: 500; }
-  #menu .product-list__container button {
-    width: 100%; }
+#menu {
+  text-align: center; }
+  #menu .menu-headings_container {
+    margin-top: 100px; }
+  #menu .products {
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 3rem; }
+  #menu img {
+    border-radius: 30px  30px 0 0; }
+  #menu .product-list__item {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    padding: 0rem;
+    height: auto;
+    border-radius: 30px; }
+  #menu .product-list__item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+  #menu .product-list__container {
+    padding: 2%; }
+    #menu .product-list__container h3, #menu .product-list__container h4 {
+      color: #232323;
+      text-shadow: #8E8E8E;
+      opacity: 80%;
+      font-weight: 500; }
+    #menu .product-list__container button {
+      width: 100%; }
 
-.admin__table td {
-  padding: 5px; }
-
-.admin-form .admin__table {
-  display: inline; }
-.admin-form button.admin__table-new.btn-yellow {
-  display: block;
-  margin: 0 auto; }
+#admin {
+  text-align: center; }
+  #admin .admin__table td {
+    padding: 5px; }
+  #admin .admin-form .admin__table {
+    display: inline; }
+  #admin .admin-form button.admin__table-new.btn-yellow {
+    display: block;
+    margin: 0 auto; }
+  #admin .block {
+    background-color: red; }
+    #admin .block .page-wrapper {
+      text-align: center; }
 
 .modal {
   display: none;
@@ -232,6 +222,7 @@ footer {
   /* Location of the box */
   left: 0;
   top: 0;
+  text-align: center;
   width: 100%;
   /* Full width */
   height: 100%;
@@ -284,11 +275,20 @@ footer {
 .show {
   display: block !important; }
 
+footer {
+  font-weight: 400;
+  background-color: #FF9D02;
+  padding-top: 10px; }
+  footer h6 {
+    color: #232323; }
+  footer span, footer p, footer a {
+    width: 100%;
+    color: white;
+    text-align: left;
+    opacity: 70%; }
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: red; }
-
   #title .title-heading {
     font-size: 3rem;
     width: 100%;
@@ -299,26 +299,35 @@ footer {
     width: 100%;
     margin-bottom: 50px; }
 
+  #features-section h2 {
+    width: 100%; }
+
   .product-list__item img {
     overflow: hidden;
     width: 100%; }
   .product-list__item ul {
     padding-left: 0  !important; }
 
-  footer {
-    overflow: hidden; } }
+  footer p, footer a {
+    text-align: center; } }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  body {
-    background-color: orange; }
-
   .products {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+
+  #title h1 {
+    font-size: 3rem; }
+  #title p {
+    text-align: center;
+    margin: auto; }
+
+  #features-section h2 {
+    width: 100%; }
+
+  footer p, footer a {
+    text-align: left; } }
 /* Medium devices (landscape tablets, 768pxd up) */
 @media only screen and (min-width: 768px) {
-  body {
-    background-color: yellow; }
-
   #title p {
     text-align: left; } }
 /* Large devices (laptops/desktops, 992px and up) */
@@ -326,12 +335,16 @@ footer {
   .products {
     grid-template-columns: repeat(3, 1fr); }
 
-  body {
-    background-color: blue; } }
+  body #title h1 {
+    font-size: 5rem; }
+  body #title p {
+    margin: 0;
+    text-align: left;
+    padding: 3rem 0; }
+
+  footer p, footer a {
+    text-align: left; } }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  body {
-    background-color: green; } }
 @media screen and (max-width: 1095px) {
   .feature-img {
     width: 80%; }

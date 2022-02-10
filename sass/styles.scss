@@ -14,15 +14,16 @@ html {
     }  
     
 body{
-    background-color: white;
-    text-align: center;
+    // background-color: white;
+    // text-align: center;
     font-family: Poppins;
     overflow-x: hidden;
     
     // overflow-y: visible;
-  background-color: pink;
+//   background-color: pink;
     // 
 }
+//bootstrap style override
 ul{
     padding-left: 0;
 }
@@ -33,12 +34,12 @@ h1,h2,h3,h4,h5,h6,a{
     color : $title-color;
 }
 //stavi pod parrent?
-h2{
-    font-size: 3rem;
-    width: 50%;
-    margin: 100px auto;
+// h2{
+//     font-size: 3rem;
+//     // width: 50%;
+//     margin: 100px auto;
 
-}
+// }
 
 //stavi pod parrent ?
 p{
@@ -48,8 +49,8 @@ p{
     font-weight: 500;
     line-height: 2rem;
     width: 50%;
-    // margin: auto;
-     text-align: left;
+     margin: auto;
+     text-align: center;
 }
 
 
@@ -66,7 +67,7 @@ p{
 //NAVBAR
 
 nav{
-   
+    
      position: fixed;
       top:0;
        width: 100%;
@@ -75,11 +76,11 @@ nav{
        transition: all 0.3s ease;
     z-index: 1;
     background-color: white;
-    // text-align: center;
+     text-align: center;
 
     .nav-logo{
         font-size: 2rem;
-        text-align: center;
+        // text-align: center;
     }
     .nav-menu{
         margin-top: 12px;
@@ -205,21 +206,22 @@ nav.sticky{
     p{
         margin: 50px 0;
         text-align: left;
-        
+        width: 70%;
     }
 }
 .title-row{
     text-align: left;
 }
 .title-image{
-    margin-left: 200px;
-    width: 80%;
+    // margin-left: 200px;
+    width: 100%;
     transform: scaleX(-1);
 
 }
 
 /* FEATURES section */
 #features-section{
+    text-align: center;
     overflow: hidden;
     .feature-box{
         min-width: 400px;
@@ -227,20 +229,24 @@ nav.sticky{
             width: 30%;
         }
     }
+    h2{
+        font-size: 3rem;
+         width: 50%;
+         margin: 100px auto;
+        text-align: center;
+    
+    }
 }
-// #features-section{
-//     margin-bottom: 300px;
-// }
-// .feature-img{
-//     /* background-color: red; */
-//     width: 50%;
-   
-// }
+//popular food 
+#popular-food{
+    text-align: center;
+}
 
 
 
 // ABOUT SECTION
 #about-us{
+    text-align: center;
     .about-img{
         width: 100%;
     }
@@ -256,36 +262,6 @@ nav.sticky{
 }
 
 
-footer{
-
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    align-items: center;
-    background-color: #fdb435 ;
-    opacity: 0.9;
-    h5{
-        color:$title-color;
-        font-size: 1.2rem;
-        font-weight: 500;
-    }
-    b{
-        font-weight: 300;
-       
-    }
-    a:hover{
-        color:white;
-    }
-    .logofooter{
-        font-size:1.5rem;
-        color:white;
-    }
-    ul{
-       b{
-          padding: 20px;
-       } 
-    }
-}
 
 
 .span-title{
@@ -299,6 +275,7 @@ footer{
 //ELEMENTS THAT ARE CREATED WITH BACKEND
 
 #menu{
+    text-align: center;
     .menu-headings_container{
         margin-top: 100px;
     }
@@ -344,6 +321,9 @@ footer{
 }
 
 // admin page
+#admin{
+text-align: center;
+
 .admin__table{
     td{
       padding: 5px;
@@ -361,40 +341,17 @@ footer{
     margin: 0 auto ;
 }
     }
+    .block{
+        background-color:red;
+        .page-wrapper{
+            text-align: center;
+        }
+    }
+   
+
+}
 
 
-
-//cart
-// .cart-icon{
-//     border: none;
-//     background-color: none;
-// }
-// .cart-icon:hover{
-//     background-color:red;
-//     cursor: pointer;
-
-// }
-// .cart-container{
-//     display: none;
-//     position: absolute;
-//     bottom:-200px;
-//     right:0px;
-//     width: 200px;
-//     height: 200px;
-//     background-color: #fdb435;
-// }
-// .cart-items__container{
-//     overflow-y: scroll;
-//     overflow-x: hidden;
-//     //if height is 100% pushes te cart buttons out
-//     height: 80%;
-// }
-
-// .checkout-container{
-//     margin-top : 300px;
-//     // padding: 5%;
-//     margin-bottom: 80vh;
-// }
 
 .modal{
     
@@ -404,6 +361,7 @@ footer{
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
+  text-align: center;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
@@ -454,14 +412,29 @@ footer{
     display: block !important;
 }
 
-
+footer{
+    font-weight: 400;
+   
+    background-color:$primary-color;
+    padding-top: 10px;
+    h6{
+        color:$title-color;
+    }
+  span, p,a{
+       width: 100%;
+       color:white;
+       text-align: left;
+       opacity: 70%;
+   }
+  
+}
 // MEDIA QUERIES
 
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     body{
-        background-color: red;
+        // background-color: red;
     }
     #title{
         .title-heading{
@@ -478,8 +451,11 @@ footer{
             margin-bottom: 50px;
         }
     }
-    #features-section{
-        
+    
+        #features-section{
+            h2{
+                width: 100%;
+            }
     }
     
     .product-list__item {
@@ -496,29 +472,55 @@ footer{
 
 }
 footer{
-    overflow: hidden;
+    p,a{
+        text-align: center;
+    }
+ 
 }
+
     //items are deafulted to this size so 
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     body{
-        background-color:orange;
+        // background-color:orange;
     }
     .products{ grid-template-columns: repeat(2, 1fr); }
+    
+    #title{
+        h1{
+            font-size: 3rem;
+        }
+        p{
+            text-align: center;
+            margin:auto;
+        }
+    }
+    #features-section{
+        h2{
+            width: 100%;
+        }
+    }
+    footer{
+        p,a{
+            text-align: left;
+        }
+    }
 }
 
 /* Medium devices (landscape tablets, 768pxd up) */
 @media only screen and (min-width: 768px) {
     body{
-        background-color: yellow;
+        // background-color: yellow;
     }
     
         #title p{
             // margin:auto;
             text-align: left;
         }
+
+       
     
     
 }
@@ -527,14 +529,31 @@ footer{
 @media only screen and (min-width: 992px) {
     .products{ grid-template-columns: repeat(3, 1fr); }
     body{
-        background-color: blue;
+       #title{
+           h1{
+               font-size: 5rem;
+           }
+           p{
+           margin: 0;
+            text-align: left;
+            padding: 3rem 0 ;
+           }
+           
+       }
+      
+    }
+    footer{
+        p,a{
+            text-align: left;
+        }
+        
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     body{
-        background-color: green;
+        // background-color: green;
     }
 }
 
