@@ -1,20 +1,7 @@
 <?php
 ?>
 
-<!-- <footer>
-    <a class="logofooter" href="">Foodies</a>
-    <ul>
-        <h5>About us:</h5>
-        <b>  Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Donec in finibus purus, eget gravida tortor. Proin vulputate fermentum justo nec auctor.
-        </b>
-    </ul>
-    <ul>
-        <h5>Contact us:</h5>
-        <b>Email: email@email.com <img src="images/email.png" width="20px"alt=""></b><br>
-        <b>Phone: +39121231 <img src="images/phone-call.png" width="20px"alt=""></b>
-        <b>Copyright Nikola Stanin</b>
-    </ul>
-</footer> -->
+
 
 <!-- Footer -->
 <footer class="text-center text-lg-start  text-muted">
@@ -44,16 +31,16 @@
             Products
           </h6>
           <p>
-            <a href="menu.php" class="text-reset">Eggs with bacon</a>
+            <a href="menu.php" class="text-reset">Breakfast Eggs</a>
           </p>
           <p>
-            <a href="menu.php" class="text-reset">Pizza for 4</a>
+            <a href="menu.php" class="text-reset">Lunch for two</a>
           </p>
           <p>
-            <a href="menu.php" class="text-reset">Easy Breakfast</a>
+            <a href="menu.php" class="text-reset">Family lunch</a>
           </p>
           <p>
-            <a href="menu.php" class="text-reset">waffles</a>
+            <a href="menu.php" class="text-reset">Vegan Lunch</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -62,7 +49,7 @@
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
+            Links
           </h6>
           <p>
             <a href="#" class="text-reset">Home</a>

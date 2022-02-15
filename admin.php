@@ -11,7 +11,7 @@ if($connect -> connect_errno) {
     echo $connect -> connect__error;
 }
 
-// Oprations -> Add new, Update, Delete
+// Operations : Add new, Update, Delete
 if (isset($_GET['operation'])) {
     if (isset($_GET['submit'])) {
         $exceptions = array('submit','operation');
@@ -53,18 +53,13 @@ if (isset($_GET['operation'])) {
     if (isset($_GET['submit']) || key($operation) == 'delete') {
         if ($connect->query($sql) == true) {
             // echo "The process ended successfully";
-
-        //    echo "
-        //     <script type=\"text/javascript\">
-        //    alert(\"process ended successfully\");
-        //     </script>
-        // ";
-
+            // make a pop up window for admin page(?)
+    
 
         }
     }
 }
-// Get data from database
+// get data from database
 $sql = "SELECT id, category, name, price, photo, availability FROM products";
 if ($result = $connect -> query($sql)) {
     while ($row = $result -> fetch_assoc()) {
@@ -98,7 +93,7 @@ include "header.php";
                                     <td><img width="80px" height="80px" src ="' . $value['photo'] . '"></td>
                                     <td>' . $value['category'] . '</td>
                                     <td>' . $value['name'] . '</td>
-                                    <td>' . $value['price'] . ' din.</td>
+                                    <td>' . $value['price'] . ' EUR.</td>
                                     <td>' . $value['availability'] . '</td>
                                     <td><button class="admin__table-button btn-yellow" type="submit" name="operation[update]" value="' . $value['id'] . '">Update</button></td>
                                     <td><button class="admin__table-button btn-del" type="submit" name="operation[delete]" value="' . $value['id'] . '">Delete</button></td>

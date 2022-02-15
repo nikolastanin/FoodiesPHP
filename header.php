@@ -45,7 +45,7 @@ bootstrap     -->
    
       <li  class="nav-item">
             <a href="index.php">Home</a>
-            <!-- <img class="active-icon" src="images/black-circle.png" width="5px"alt=""> -->
+       
         </li>
 
       <li class="nav-item">
@@ -61,7 +61,7 @@ bootstrap     -->
             <a  href="admin.php">Admin </a>
         </li>
         <li  class="nav-item">
-            <!-- <span class="cart-icon btn-cart"><img src="images/shopping-cart.png" alt=""><span class="cart-count">(0)</span></span> -->
+           
             <button class="cart-icon btn-cart"><img src="images/shopping-cart.png" alt=""><span class="cart-count">(0)</span></button>
            
         
@@ -83,9 +83,7 @@ bootstrap     -->
     <h3>Your cart items</h3>
     <hr>
         <div class="cart-items__container">
-                <!-- <div class="cart-item">
-                    
-                </div> -->
+              
         </div>
         <hr>
         <p id="price-text">Your total:</p>
@@ -96,4 +94,3 @@ bootstrap     -->
         </div>
     </div>
 </div>
-    <!-- <button class="btn-yellow"id="sandwich">menu</button> -->

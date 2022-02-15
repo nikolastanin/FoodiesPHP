@@ -38,14 +38,7 @@ if (isset($sql_str)) {
 }
 ?>
 
-    <!-- <section class="main-cover main-cover-products">
-        <div class="page-wrapper">
-            <div class="block-title block-title--white">Products</div>
-        </div>
-    </section> -->
-
-    <!-- <section class="product-container-menu">
-        <div class="page-wrapper"> -->
+  
 
         <section id="menu">
             
@@ -65,7 +58,7 @@ if (isset($sql_str)) {
                                 <div class="product-list__container">
                                     <h3 class="product-list__title">'.$value['category'].'</h3>
                                     <h4 class="product-list__subtitle">'.$value['name'].'</h4>
-                                    <p class="product-list__price">'.$value['price'].' din.</p>
+                                    <p class="product-list__price">'.$value['price'].' EUR.</p>
                                     <button class="product-list__button btn-yellow">Add to Cart </button>
                                 </div>
                             </div>';
@@ -79,6 +72,5 @@ if (isset($sql_str)) {
            
          </section>
 
-    <!-- <script src="main.js" async defer ></script> -->
-    <!-- <script src="scripts/shopping-cart.js" async defer></script> -->
+
 <?php include "footer.php"?>
