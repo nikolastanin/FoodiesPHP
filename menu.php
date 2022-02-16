@@ -57,9 +57,9 @@ if (isset($sql_str)) {
                         <img src="'.$value['photo'].'" class="product-list-img" alt="" width="100%">
                                 <div class="product-list__container">
                                     <h3 class="product-list__title">'.$value['category'].'</h3>
-                                    <h4 class="product-list__subtitle">'.$value['name'].'</h4>
+                                    <h5 class="product-list__subtitle">'.$value['name'].'</h5>
                                     <p class="product-list__price">'.$value['price'].' EUR.</p>
-                                    <button class="product-list__button btn-yellow">Add to Cart </button>
+                                    <button  class="product-list__button btn-yellow btn-transparent">Add to Cart </button>
                                 </div>
                             </div>';
                     }

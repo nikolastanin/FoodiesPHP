@@ -8,7 +8,8 @@ const body = document.getElementsByName("body");
 const modalCloseBtn = document.querySelector("#modal-close__btn");
 const cartItemsContainer = document.querySelector(".cart-items__container");
 const cartItemsCount = document.querySelector(".cart-count");
-const checkoutContainer = document.querySelector(".checkout-items__container");
+let checkoutContainer = document.querySelector(".checkout-items__container");
+console.log(checkoutContainer);
 let cartElements = [];
 let itemCount;
 let quantityBox = "";
@@ -37,6 +38,7 @@ const showData = () => {
         </div>`;
         cartItemsContainer.innerHTML = string;
         cartItemsCount.textContent = `${"("+itemCount+")"}`;
+        
     });
 
 
@@ -204,15 +206,29 @@ const clearCart = () => {
 }
 
 
-
+//change color of button
+const changeColor = (e) =>{
+    let classes = e.target.classList;
+    if(classes.contains("btn-transparent")){
+       classes.remove("btn-transparent");
+    }
+    else{
+        classes.add("btn-transparent");
+    }
+    // console.log(e.target.classList.remove("btn-transparent"));
+    console.log(e.target.className);
+}
 
 
 //Directing to checkout page if the user clicks and the cart is !empty
-const checkout = () => {
+ const checkout = () => {
+   
     if (cartElements.length == 0) {
         window.alert("your cart is empty! choose your items");
     } else
+    
         window.location = "./checkout.php";
+      
     
 }
 
@@ -224,6 +240,20 @@ buttons.forEach(element => {
 
 
 });
+
+//changing button color on mouse enter/leave
+
+buttons.forEach(element => {
+    element.addEventListener("mouseover", changeColor);
+
+
+});
+buttons.forEach(element => {
+    element.addEventListener("mouseout", changeColor);
+
+
+});
+
 
 //  event listeners for cart elements
 cartBtn.addEventListener("click", showCart);

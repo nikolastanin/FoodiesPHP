@@ -4,7 +4,7 @@
 
 
 <!-- Footer -->
-<footer class="text-center text-lg-start  text-muted">
+<footer id="footer" class="text-center text-lg-start  text-muted">
   
 
   <!-- Section: Links  -->

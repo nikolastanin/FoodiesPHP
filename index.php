@@ -89,9 +89,11 @@ include "header.php";
             echo '<div class="popular-food__item">
                                 <img src="'.$value['photo'].'" class="product-list__picture" alt="">
                                 <div class="popular-food__text"> 
-                                    <div class="product-text">'.$value['category'].'</div>
-                                    <div class="product-text">'.$value['name'].'</div>
-                                    <div class="product-text">'.$value['price'].' din.</div>
+                                     <div class="product-text"><h3>'.$value['name'].'</h3></div>
+                                    <div class="product-text"> <h5>'.$value['category'].'</h5></div>
+                                   
+                                    <div class="product-text"> <p>'.$value['price'].' EUR.</p> </div>
+                                    <a href="menu.php"  class="btn-yellow btn-transparent">Order now</a>
                                 </div> 
                             </div>';
         }

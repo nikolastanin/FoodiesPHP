@@ -260,7 +260,7 @@ input{
    
     .popular-food__container{
         
-        display: flex;
+        display: block;
         flex-wrap: wrap;
        justify-content: space-around;
         width: 100%;
@@ -269,7 +269,8 @@ input{
 
     .popular-food__item{
         min-width: 100px;
-        width: 30%;
+        width: 50%;
+        margin: 2rem auto;
         background-color: white;
         transition: 0.3s;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -282,6 +283,22 @@ input{
            
             border : 0 0 30px 30px;
             width: 100%;
+            padding: 1rem;
+            h3{
+                color: $primary-color !important; 
+            }
+            h5{
+                color: $paragraph-color !important;
+            }
+            p{
+                margin-bottom:1rem;
+            }
+           a{
+                width: 100%;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
        }
        
             img{
@@ -354,15 +371,18 @@ input{
   }
 
   .product-list__container{
-      padding: 2%;
-      h3,h4{
-          color:$title-color;
-          text-shadow: #8E8E8E;
-          opacity: 80%;
-          font-weight: 500;
-      }
+      padding: 1rem;
+     h3{
+         color: $primary-color;
+     }
+     h5{
+         color: $paragraph-color;
+     }
       button{
           width: 100%;
+          &:hover{
+
+          }
       }
   }
    
@@ -590,19 +610,20 @@ footer{
             text-align: left;
         }
     }
+  
 }
 
 /* Medium devices (landscape tablets, 768pxd up) */
 @media only screen and (min-width: 768px) {
     body{
-        // background-color: yellow;
+        //  background-color: yellow;
     }
     
         #title p{
             // margin:auto;
             text-align: left;
         }
-
+       
        
     
     
@@ -625,6 +646,18 @@ footer{
        }
       
     }
+    #popular-food{
+        .popular-food__container{
+            width: 100%;
+            display: flex;
+            .popular-food__item{
+                width: 30%;
+                margin: 2rem auto;
+                
+            }
+        }
+    }
+
     footer{
         p,a{
             text-align: left;
