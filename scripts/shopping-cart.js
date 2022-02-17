@@ -55,13 +55,18 @@ const showData = async () => {
 }
 
 
-const totalCalc = async (element) => {
-    
+const getTotal = async (element) => {
+    price =0;
          await showData();
     cartElements.forEach(element => {
-      console.log(element.price);
-        // totalPrice.innerHTML = price;
+    price += parseInt(element.price);
+         totalPrice.innerHTML =`Total price : ${price} EUR.`;
     });
+    setTotal(price);
+}
+const setTotal = (priceTotal) =>{
+    localStorage.setItem("priceTotal", JSON.stringify(priceTotal));
+    let jsonfile = JSON.parse(localStorage.getItem("priceTotal"));
 }
 
 
@@ -80,6 +85,7 @@ const deleteItem = (e) => {
             updateLocalStorage();
             itemCount--;
             showData();
+            getTotal();
         }
     }
 
@@ -115,6 +121,7 @@ window.onload = (event) => {
         console.log("ima nesto");
         cartElements = fetchData;
         showData();
+        getTotal();
 
     }
 };
@@ -124,6 +131,10 @@ const updateLocalStorage = () => {
     localStorage.setItem("products", JSON.stringify(cartElements));
     let testing = JSON.parse(localStorage.getItem("products"));
     // console.log(testing +"results of JSON");
+
+    //za total price
+
+    localStorage.setItem("totalprice",JSON.stringify())
 
 }
 
@@ -152,7 +163,7 @@ const addItem = (e) => {
     cartElements.push(cartItem);
     updateLocalStorage();
     showData();
-    totalCalc();
+    getTotal();
 }
 
 
