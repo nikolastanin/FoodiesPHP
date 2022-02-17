@@ -62,6 +62,7 @@ if (isset($sql_str)) {
                                     <button  class="product-list__button btn-yellow btn-transparent">Add to Cart </button>
                                 </div>
                             </div>';
+                          
                     }
                 }
                 else {

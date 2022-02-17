@@ -3,6 +3,7 @@ const buttons = document.querySelectorAll(".product-list__button");
 const cartBtn = document.querySelector(".btn-cart");
 const clearBtn = document.querySelector(".cart-button__clear");
 const checkoutBtn = document.querySelector(".cart-button__checkout");
+const checkoutLoadBtn =document.querySelector("#checkout-btn"); 
 const modal = document.querySelector(".modal");
 const body = document.getElementsByName("body");
 const modalCloseBtn = document.querySelector("#modal-close__btn");
@@ -59,7 +60,7 @@ const getTotal = async (element) => {
     price =0;
          await showData();
     cartElements.forEach(element => {
-    price += parseInt(element.price);
+    price += parseInt(element.price) * parseInt(element.quantity);
          totalPrice.innerHTML =`Total price : ${price} EUR.`;
     });
     setTotal(price);
@@ -67,6 +68,7 @@ const getTotal = async (element) => {
 const setTotal = (priceTotal) =>{
     localStorage.setItem("priceTotal", JSON.stringify(priceTotal));
     let jsonfile = JSON.parse(localStorage.getItem("priceTotal"));
+    
 }
 
 
@@ -107,6 +109,10 @@ const updateQuantity = (e) => {
 
     update.quantity = value;
     updateLocalStorage();
+    getTotal();
+
+
+    
 
 
 
@@ -131,10 +137,9 @@ const updateLocalStorage = () => {
     localStorage.setItem("products", JSON.stringify(cartElements));
     let testing = JSON.parse(localStorage.getItem("products"));
     // console.log(testing +"results of JSON");
-
-    //za total price
-
-    localStorage.setItem("totalprice",JSON.stringify())
+    
+    
+    return testing;
 
 }
 
@@ -237,17 +242,32 @@ const changeColor = (e) => {
 
 
 //Directing to checkout page if the user clicks and the cart is !empty
-const checkout = () => {
+const checkout = (e) => {
 
     if (cartElements.length == 0) {
         window.alert("your cart is empty! choose your items");
+        e.preventDefault();
     } else
-
-        window.location = "./checkout.php";
-
+       console.log("radi"); 
+    //    checkoutBtn.innerHTML = `  <a href="checkout.php">checkout</a>`;
+       
 
 }
-
+const checkoutData = () =>{
+  
+    let string = "";
+    console.log("testing mada f");
+    cartElements.forEach(element => {
+               string +=`
+               <hr>
+              <h5> ${element.title}</h5>
+              <p> ${element.price} EUR.</p>
+              <p> ${element.quantity} quantity</p>
+              <hr>`
+    });
+    checkoutContainer.innerHTML = string;
+    checkoutLoadBtn.style.display = "none";
+}
 
 
 //Event listeners for backend loaded items
@@ -276,3 +296,4 @@ cartBtn.addEventListener("click", showCart);
 clearBtn.addEventListener("click", clearCart);
 checkoutBtn.addEventListener("click", checkout)
 modalCloseBtn.addEventListener("click", closeCart);
+checkoutLoadBtn.addEventListener("click", checkoutData);

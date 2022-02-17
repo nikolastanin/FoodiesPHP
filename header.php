@@ -90,7 +90,7 @@ bootstrap     -->
         <hr>
         <div class="cart-buttons">
             <button class="cart-button__clear btn btn-danger">clear</button>
-            <button class="cart-button__checkout btn btn-success">checkout</button>
+            <button class="cart-button__checkout btn btn-success"><a href="checkout.php">checkout</a></button>
         </div>
     </div>
 </div>
