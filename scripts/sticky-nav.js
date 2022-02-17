@@ -1,11 +1,14 @@
 
-
+//on scroll add class
 window.addEventListener("scroll",function(){
     var header = document.querySelector("nav");
     header.classList.toggle("sticky",window.scrollY >70);
 })
+
 let toggle = document.getElementsByClassName("toggle")[0];
 let navItems = document.querySelectorAll(".nav-item");
+
+//showing nav bar with hamburger menu on mobile mode
 const showNav = () =>{
 
     
@@ -24,8 +27,4 @@ const showNav = () =>{
     }
       
     
-
-
-
-
 toggle.addEventListener("click",showNav);

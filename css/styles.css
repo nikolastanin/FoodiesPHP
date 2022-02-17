@@ -13,7 +13,13 @@ body {
 ul {
   padding-left: 0; }
 
-h1, h2, h3, h4, h5, h6, a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
   font-weight: 700;
   color: #232323; }
 
@@ -223,7 +229,7 @@ input {
     display: grid;
     grid-gap: 3rem; }
   #menu img {
-    border-radius: 30px  30px 0 0; }
+    border-radius: 30px 30px 0 0; }
   #menu .product-list__item {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -239,7 +245,8 @@ input {
     #menu .product-list__container h5 {
       color: #8E8E8E; }
     #menu .product-list__container button {
-      width: 100%; }
+      width: 100%;
+      transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out; }
 
 #admin {
   text-align: center; }
@@ -325,7 +332,7 @@ input {
     top: 0;
     opacity: 1; } }
 .hide {
-  display: none  !important; }
+  display: none !important; }
 
 .show {
   display: block !important; }
@@ -336,7 +343,9 @@ footer {
   padding-top: 10px; }
   footer h6 {
     color: #232323; }
-  footer span, footer p, footer a {
+  footer span,
+  footer p,
+  footer a {
     width: 100%;
     color: white;
     text-align: left;
@@ -361,9 +370,10 @@ footer {
     overflow: hidden;
     width: 100%; }
   .product-list__item ul {
-    padding-left: 0  !important; }
+    padding-left: 0 !important; }
 
-  footer p, footer a {
+  footer p,
+  footer a {
     text-align: center; }
 
   .modal #modal-close__btn {
@@ -391,7 +401,8 @@ footer {
   #features-section h2 {
     width: 100%; }
 
-  footer p, footer a {
+  footer p,
+  footer a {
     text-align: left; } }
 /* Medium devices (landscape tablets, 768pxd up) */
 @media only screen and (min-width: 768px) {
@@ -416,7 +427,8 @@ footer {
       width: 30%;
       margin: 2rem auto; }
 
-  footer p, footer a {
+  footer p,
+  footer a {
     text-align: left; } }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media screen and (max-width: 1095px) {

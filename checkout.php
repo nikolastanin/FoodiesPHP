@@ -1,4 +1,4 @@
-
+<!-- TO DO finish this page  -->
 <?php include "header.php"?>
 <div class="checkout-container" style="text-align:center">
 <h1>Check-out</h1> 

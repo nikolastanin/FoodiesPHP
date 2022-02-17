@@ -20,7 +20,7 @@ let price = 0;
 
 
 //Displaying CartItems
-const showData = () => {
+const showData = async () => {
     let string = "";
     itemCount = 0;
 
@@ -38,7 +38,7 @@ const showData = () => {
         </div>`;
         cartItemsContainer.innerHTML = string;
         cartItemsCount.textContent = `${"("+itemCount+")"}`;
-        
+
     });
 
 
@@ -55,8 +55,13 @@ const showData = () => {
 }
 
 
-const totalCalc = (element) => {
-
+const totalCalc = async (element) => {
+    
+         await showData();
+    cartElements.forEach(element => {
+      console.log(element.price);
+        // totalPrice.innerHTML = price;
+    });
 }
 
 
@@ -147,6 +152,7 @@ const addItem = (e) => {
     cartElements.push(cartItem);
     updateLocalStorage();
     showData();
+    totalCalc();
 }
 
 
@@ -191,7 +197,7 @@ const clearCart = () => {
         window.alert("cart is already empty!");
     } else {
 
-       
+
         // console.log("deleting cart elements");
         cartElements = [];
         localStorage.removeItem("products");
@@ -207,12 +213,11 @@ const clearCart = () => {
 
 
 //change color of button
-const changeColor = (e) =>{
+const changeColor = (e) => {
     let classes = e.target.classList;
-    if(classes.contains("btn-transparent")){
-       classes.remove("btn-transparent");
-    }
-    else{
+    if (classes.contains("btn-transparent")) {
+        classes.remove("btn-transparent");
+    } else {
         classes.add("btn-transparent");
     }
     // console.log(e.target.classList.remove("btn-transparent"));
@@ -221,15 +226,15 @@ const changeColor = (e) =>{
 
 
 //Directing to checkout page if the user clicks and the cart is !empty
- const checkout = () => {
-   
+const checkout = () => {
+
     if (cartElements.length == 0) {
         window.alert("your cart is empty! choose your items");
     } else
-    
+
         window.location = "./checkout.php";
-      
-    
+
+
 }
 
 
